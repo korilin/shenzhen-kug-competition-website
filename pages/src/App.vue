@@ -23,6 +23,7 @@ import Footer from "./components/Footer.vue"
 body {
     padding: 0;
     margin: 0;
+    min-height: 100vh;
 }
 #app {
     font-family: Avenir, Helvetica, Arial, sans-serif;
@@ -30,7 +31,13 @@ body {
     -moz-osx-font-smoothing: grayscale;
     color: #2c3e50;
 }
-.el-header, .el-footer {
+
+.el-main {
+    padding-bottom: 201px;
+}
+
+.el-header,
+.el-footer {
     padding: 0;
     margin: 0;
 }
