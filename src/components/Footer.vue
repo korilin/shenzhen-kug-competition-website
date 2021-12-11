@@ -28,11 +28,11 @@ const links = {
 
 <template>
     <div id="footer">
-        <el-descriptions column="1" title="Info">
+        <el-descriptions :column="1" title="Info">
             <el-descriptions-item :label="label + '：'" v-for="(info, label) in infos">{{ info }}</el-descriptions-item>
         </el-descriptions>
 
-        <el-descriptions column="1" title="Link">
+        <el-descriptions :column="1" title="Link">
             <el-descriptions-item :label="label + '：'" v-for="(info, label) in links">
                 <el-link :href="info.link" target="_blank" type="primary">{{ info.text }}</el-link>
             </el-descriptions-item>

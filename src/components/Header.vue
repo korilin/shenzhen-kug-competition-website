@@ -1,6 +1,5 @@
 <script setup>
 import { ref } from '@vue/reactivity';
-import router from '../lib/router';
 
 const linklist = {
     "主页": "/",
@@ -19,9 +18,9 @@ function handleSelect(key, keyPath) {
     <div id="header">
         <div class="title">
             <img
-                class="logo"
-                src="https://kotlinlang.org/assets/images/favicon.ico"
-                alt="KUG Shenzhen"
+                class="banner"
+                src="../assets/shenzhen-kug-banner.jpg"
+                alt="Shenzhen Kotlin User Group"
             />
         </div>
         <el-menu
@@ -54,10 +53,10 @@ function handleSelect(key, keyPath) {
     }
 }
 
-.logo {
+.banner {
     display: flex;
-    padding: 10px 20px;
-    height: 40px;
+    padding: 5px 20px;
+    height: 60px;
 }
 .el-menu {
     align-items: flex-end;
