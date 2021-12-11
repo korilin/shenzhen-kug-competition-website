@@ -11,6 +11,10 @@
 | css loader | scss |
 | ui libary | Element UI plus |
 
-## Recommended IDE Setup
+## Recommended
 
-- [VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=johnsoncodehk.volar)
+**IDE Setup：** [VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=johnsoncodehk.volar)
+
+**Package Manager Tool：** [Yarn](https://yarnpkg.com/)
+
+Then you can run `yarn run dev` to preview.
