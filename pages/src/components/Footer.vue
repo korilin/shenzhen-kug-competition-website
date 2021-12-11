@@ -6,17 +6,23 @@ const infos = {
 }
 const me = {
     link: "https://github.com/korilin",
-    name: "@korilin"
+    text: "@korilin"
 }
 
 const github = {
     link: "https://github.com/korilin/shenzhen-kug-competition-website",
-    name: "shenzhen-kug-competition-website"
+    text: "shenzhen-kug-competition-website"
+}
+
+const icp = {
+    link: "http://beian.miit.gov.cn/",
+    text: "--"
 }
 
 const links = {
     "组建人": me,
     "站点源码": github,
+    "备案号": icp
 }
 </script>
 
@@ -28,7 +34,7 @@ const links = {
 
         <el-descriptions column="1" title="Link">
             <el-descriptions-item :label="label + '：'" v-for="(info, label) in links">
-                <el-link :href="info.link" target="_blank" type="primary">{{ info.name }}</el-link>
+                <el-link :href="info.link" target="_blank" type="primary">{{ info.text }}</el-link>
             </el-descriptions-item>
         </el-descriptions>
 
@@ -39,6 +45,9 @@ const links = {
 <style lang="scss" scoped>
 #footer {
     display: flex;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
     border-top: solid 1px #e6e6e6;
     padding: 20px;
     justify-content: space-around;
