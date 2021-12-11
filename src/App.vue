@@ -24,6 +24,7 @@ body {
     padding: 0;
     margin: 0;
     min-height: 100vh;
+    position: relative;
 }
 #app {
     font-family: Avenir, Helvetica, Arial, sans-serif;
@@ -33,12 +34,19 @@ body {
 }
 
 .el-main {
-    padding-bottom: 201px;
+    margin-bottom: 210px;
 }
 
 .el-header,
 .el-footer {
-    padding: 0;
-    margin: 0;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+.el-footer {
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    height: auto !important;
 }
 </style>
