@@ -1,7 +1,7 @@
 <script setup>
 </script>
 
-<template>template</template>
+<template>coding</template>
 
 <style lang="scss" scoped>
 </style>
