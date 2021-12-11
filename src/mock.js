@@ -14,12 +14,14 @@ mockjs.mock("/mock/test", mockTest);
 
 const getSeminars = function () {
     let seminars = [];
-    for (let i = 0; i < 20; i++) {
+    for (let i = 15; i > 0; i--) {
         seminars.push({
             seminarId: i,
-            title: random.cparagraph(7, 15),
-            description: random.cparagraph(30, 100),
+            title: "第" + i + "期 Thematic Seminar",
+            theme: random.ctitle(),
+            description: random.sentence(30, 50),
             eventTime: new Date().getTime(),
+            bilibiliUrl: "https://www.bilibili.com/video/BV1K3411t7Uy",
         });
     }
     return seminars;
