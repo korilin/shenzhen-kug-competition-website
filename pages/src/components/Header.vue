@@ -4,10 +4,10 @@ import router from '../lib/router';
 
 const linklist = {
     "主页": "/",
-    "Thematic Seminar": "/seminar",
-    "Kotlin Competitions": "/competitions",
+    "Thematic Seminar": "/seminars",
+    "Kotlin Conquerors": "/conquerors",
 }
-const activeIndex = ref(router.currentRoute.value.path)
+const activeIndex = ref(window.location.pathname)
 
 // 测试用
 function handleSelect(key, keyPath) {

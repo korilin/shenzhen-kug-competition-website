@@ -1,14 +1,14 @@
 import HomePage from "../pages/HomePage.vue";
 import AuthPage from "../pages/AuthPage.vue";
-import SeminarPage from "../pages/SeminarPage.vue";
-import Competitions from "../pages/Competitions.vue";
+import Seminars from "../pages/Seminars.vue";
+import Conquerors from "../pages/Conquerors.vue";
 import { createRouter, createWebHistory } from "vue-router";
 
 const routes = [
     { path: "/auth", component: AuthPage },
     { path: "/", component: HomePage },
-    { path: "/seminar", component: SeminarPage },
-    { path: "/competitions", component: Competitions },
+    { path: "/seminars", component: Seminars },
+    { path: "/conquerors", component: Conquerors },
 ];
 
 const router = createRouter({
