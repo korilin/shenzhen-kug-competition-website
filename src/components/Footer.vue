@@ -52,4 +52,8 @@ const links = {
     padding: 20px;
     justify-content: space-around;
 }
+
+.el-descriptions {
+    margin-top: 20px;
+}
 </style>
