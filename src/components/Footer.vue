@@ -10,8 +10,8 @@ const me = {
 }
 
 const github = {
-    link: "https://github.com/korilin/shenzhen-kug-competition-website",
-    text: "shenzhen-kug-competition-website"
+    link: "https://github.com/shenzhen-kug/shenzhen-kug-website-v2",
+    text: "shenzhen-kug-website"
 }
 
 const icp = {

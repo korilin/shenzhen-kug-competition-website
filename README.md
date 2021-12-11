@@ -7,9 +7,9 @@
 | type | option |
 | -- | -- |
 | framework | Vue 3 |
-| build tool | Vite |
+| build tool | [Vite](https://vitejs.dev/) |
 | css loader | scss |
-| ui libary | Element UI plus |
+| ui libary | [element plus](https://element-plus.gitee.io/zh-CN/) |
 
 ## Recommended IDE Setup
 
