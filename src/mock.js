@@ -19,7 +19,7 @@ const getSeminars = function () {
             seminarId: i,
             title: random.cparagraph(7, 15),
             description: random.cparagraph(30, 100),
-            eventTime: random.date,
+            eventTime: new Date().getTime(),
         });
     }
     return seminars;

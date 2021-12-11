@@ -44,10 +44,8 @@ const links = {
 
 <style lang="scss" scoped>
 #footer {
+    position: relative;
     display: flex;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
     border-top: solid 1px #e6e6e6;
     padding: 20px;
     justify-content: space-around;
