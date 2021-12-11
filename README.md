@@ -6,10 +6,13 @@
 
 | type | option |
 | -- | -- |
-| framework | Vue 3 |
-| build tool | Vite |
+| framework | vue 3 |
+| route | vue-router |
+| build tool | [vite](https://vitejs.dev/) |
 | css loader | scss |
-| ui libary | Element UI plus |
+| ui libary | [element plus](https://element-plus.gitee.io/zh-CN/) |
+
+also see [package.json](./package.json)
 
 ## Recommended
 

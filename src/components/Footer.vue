@@ -10,8 +10,8 @@ const me = {
 }
 
 const github = {
-    link: "https://github.com/korilin/shenzhen-kug-competition-website",
-    text: "shenzhen-kug-competition-website"
+    link: "https://github.com/shenzhen-kug/shenzhen-kug-website-v2",
+    text: "shenzhen-kug-website"
 }
 
 const icp = {
@@ -28,11 +28,11 @@ const links = {
 
 <template>
     <div id="footer">
-        <el-descriptions column="1" title="Info">
+        <el-descriptions :column="1" title="Info">
             <el-descriptions-item :label="label + '：'" v-for="(info, label) in infos">{{ info }}</el-descriptions-item>
         </el-descriptions>
 
-        <el-descriptions column="1" title="Link">
+        <el-descriptions :column="1" title="Link">
             <el-descriptions-item :label="label + '：'" v-for="(info, label) in links">
                 <el-link :href="info.link" target="_blank" type="primary">{{ info.text }}</el-link>
             </el-descriptions-item>
@@ -44,12 +44,14 @@ const links = {
 
 <style lang="scss" scoped>
 #footer {
+    position: relative;
     display: flex;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
     border-top: solid 1px #e6e6e6;
     padding: 20px;
     justify-content: space-around;
+}
+
+.el-descriptions {
+    margin-top: 20px;
 }
 </style>
