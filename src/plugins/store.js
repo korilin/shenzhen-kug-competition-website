@@ -4,13 +4,16 @@ const store = createStore({
     state() {
         return {
             user: null,
-            seminarRecords: [],
+            seminarRecords: null,
             seminarNow: null,
         };
     },
     mutations: {
-        addSeminarRecord(state, record) {
-            state.seminarRecords.push(record);
+        updateSeminarRecords(state, seminars) {
+            state.seminarRecords = seminars;
+        },
+        updateSeminarNow(state, seminar) {
+            state.seminarNow = seminar;
         },
     },
 });

@@ -6,11 +6,11 @@ import { dateFromTimestamp } from "../utils/utils"
 
 const store = useStore()
 
-httpTool.get(APIs.seminar_record).then((response) => {
-    for (const index in response.data) {
-        store.commit('addSeminarRecord', response.data[index])
-    };
-})
+if (store.state.seminarRecords == null) {
+    httpTool.get(APIs.seminar_record).then((response) => {
+        store.commit('updateSeminarRecords', response.data)
+    })
+}
 
 function openNewTab(url) {
     window.open(url)

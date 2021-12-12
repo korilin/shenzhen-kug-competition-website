@@ -1,18 +1,24 @@
 <script setup>
 
 import { ref } from "vue-demi"
+import { useStore } from "vuex"
 import APIs from "../utils/apis"
 import httpTool from "../utils/http-tool"
 import { dateFromTimestamp } from "../utils/utils"
 
 const svgSize = 18
-const seminarNow = ref(null)
+const store = useStore()
 
+const seminarNow = ref(store.state.seminarNow)
 const isEnter = ref(true)
 
-httpTool.get(APIs.seminar_now).then((response) => {
-    seminarNow.value = response.data
-})
+if (store.state.seminarNow === null) {
+    httpTool.get(APIs.seminar_now).then((response) => {
+        store.commit('updateSeminarNow', response.data);
+        seminarNow.value = store.state.seminarNow;
+    })
+}
+
 </script>
 
 <template>
