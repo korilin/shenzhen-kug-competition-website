@@ -12,7 +12,6 @@ const isEnter = ref(true)
 
 httpTool.get(APIs.seminar_now).then((response) => {
     seminarNow.value = response.data
-    console.log(seminarNow);
 })
 </script>
 
@@ -35,11 +34,7 @@ httpTool.get(APIs.seminar_now).then((response) => {
                         <notebook :width="svgSize" :height="svgSize" />主题
                     </div>
                 </template>
-                <el-tag
-                    type="primary"
-                    v-for="theme in seminarNow.themes"
-                    style="margin-right: 10px;"
-                >{{ theme }}</el-tag>
+                <el-tag v-for="theme in seminarNow.themes" style="margin-right: 10px;">{{ theme }}</el-tag>
             </el-descriptions-item>
             <el-descriptions-item>
                 <template #label>
@@ -50,7 +45,7 @@ httpTool.get(APIs.seminar_now).then((response) => {
                 {{ seminarNow.description }}
             </el-descriptions-item>
         </el-descriptions>
-        <div style="margin: 50px auto 80px; text-align: center;">
+        <div style="margin: 50px auto; text-align: center;">
             <el-button type="success" :disabled="isEnter">{{ isEnter ? "已报名" : "报名参加本期 Seminar" }}</el-button>
         </div>
     </div>
