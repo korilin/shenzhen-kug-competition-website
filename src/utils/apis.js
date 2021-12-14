@@ -1,4 +1,4 @@
-const seminar = "/api/seminar/";
+const seminar = "/api/seminar";
 
 const APIs = {
     seminar_record: seminar + "/record",

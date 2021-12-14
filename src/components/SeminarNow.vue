@@ -1,19 +1,24 @@
 <script setup>
 
 import { ref } from "vue-demi"
+import { useStore } from "vuex"
 import APIs from "../utils/apis"
 import httpTool from "../utils/http-tool"
 import { dateFromTimestamp } from "../utils/utils"
 
 const svgSize = 18
-const seminarNow = ref(null)
+const store = useStore()
 
+const seminarNow = ref(store.state.seminarNow)
 const isEnter = ref(true)
 
-httpTool.get(APIs.seminar_now).then((response) => {
-    seminarNow.value = response.data
-    console.log(seminarNow);
-})
+if (store.state.seminarNow === null) {
+    httpTool.get(APIs.seminar_now).then((response) => {
+        store.commit('updateSeminarNow', response.data);
+        seminarNow.value = store.state.seminarNow;
+    })
+}
+
 </script>
 
 <template>
@@ -35,11 +40,7 @@ httpTool.get(APIs.seminar_now).then((response) => {
                         <notebook :width="svgSize" :height="svgSize" />主题
                     </div>
                 </template>
-                <el-tag
-                    type="primary"
-                    v-for="theme in seminarNow.themes"
-                    style="margin-right: 10px;"
-                >{{ theme }}</el-tag>
+                <el-tag v-for="theme in seminarNow.themes" style="margin-right: 10px;">{{ theme }}</el-tag>
             </el-descriptions-item>
             <el-descriptions-item>
                 <template #label>
@@ -50,7 +51,7 @@ httpTool.get(APIs.seminar_now).then((response) => {
                 {{ seminarNow.description }}
             </el-descriptions-item>
         </el-descriptions>
-        <div style="margin: 50px auto 80px; text-align: center;">
+        <div style="margin: 50px auto; text-align: center;">
             <el-button type="success" :disabled="isEnter">{{ isEnter ? "已报名" : "报名参加本期 Seminar" }}</el-button>
         </div>
     </div>
