@@ -1,5 +1,4 @@
 <script setup>
-
 import { ref } from "vue-demi"
 import { useStore } from "vuex"
 import APIs from "../utils/apis"
@@ -10,7 +9,8 @@ const svgSize = 18
 const store = useStore()
 
 const seminarNow = ref(store.state.seminarNow)
-const isEnter = ref(true)
+const isEnter = ref(false)
+
 
 if (store.state.seminarNow === null) {
     httpTool.get(APIs.seminar_now).then((response) => {
@@ -18,7 +18,6 @@ if (store.state.seminarNow === null) {
         seminarNow.value = store.state.seminarNow;
     })
 }
-
 </script>
 
 <template>
@@ -52,7 +51,11 @@ if (store.state.seminarNow === null) {
             </el-descriptions-item>
         </el-descriptions>
         <div style="margin: 50px auto; text-align: center;">
-            <el-button type="success" :disabled="isEnter">{{ isEnter ? "已报名" : "报名参加本期 Seminar" }}</el-button>
+            <el-button
+                type="success"
+                :disabled="isEnter"
+                @click="formDrawer = true"
+            >{{ isEnter ? "已报名" : "报名参加本期 Seminar" }}</el-button>
         </div>
     </div>
 </template>

@@ -9,7 +9,7 @@ axios.interceptors.request.use(
     (error) => {
         console.log(error);
         ElMessage.error("网络请求超时");
-        return Promise.resolve(err);
+        return Promise.resolve(error);
     }
 );
 
@@ -20,7 +20,7 @@ axios.interceptors.response.use(
     },
     (error) => {
         console.log(error);
-        ElMessage.error(reason);
+        ElMessage.error(error);
         return Promise.resolve(error);
     }
 );
