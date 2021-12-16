@@ -1,8 +1,8 @@
 <script setup>
 import { useStore } from "vuex";
-import APIs from "../utils/apis";
-import httpTool from "../utils/http-tool"
-import { dateFromTimestamp } from "../utils/utils"
+import APIs from "../../utils/apis";
+import httpTool from "../../utils/http-tool"
+import { dateFromTimestamp } from "../../utils/utils"
 
 const store = useStore()
 
@@ -32,7 +32,7 @@ function openNewTab(url) {
                 :disabled="seminar.bilibiliUrl == null"
                 @click="openNewTab(seminar.bilibiliUrl)"
             >
-                <span style="line-height: 25px;">观看回放视频</span>
+                <span style="position: relative; top: -3px;">观看回放视频</span>
 
                 <video-play :width="18" :height="18" />
             </el-button>
@@ -43,7 +43,7 @@ function openNewTab(url) {
 <style lang="scss" scoped>
 svg {
     position: relative;
-    top: 4px;
+    top: 1px;
     padding-left: 10px;
 }
 
