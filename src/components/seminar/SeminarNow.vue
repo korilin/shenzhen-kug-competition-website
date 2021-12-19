@@ -30,7 +30,7 @@ const form = reactive({
 })
 
 // 简单正则，中间有`@`有`.`就行
-const emailReg =/.+@.+\..+/
+const emailReg = /.+@.+\..+/
 
 const rules = {
     name: {
