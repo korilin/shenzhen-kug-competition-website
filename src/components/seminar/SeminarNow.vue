@@ -29,6 +29,9 @@ const form = reactive({
     rank: ""
 })
 
+// 简单正则，中间有`@`有`.`就行
+const emailReg =/.+@.+\..+/
+
 const rules = {
     name: {
         required: true,
@@ -37,6 +40,7 @@ const rules = {
     email: {
         required: true,
         message: '请填写你的联系邮箱',
+        validator: (rule, value) => emailReg.test(value)
     }
 }
 
