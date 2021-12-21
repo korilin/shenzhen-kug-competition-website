@@ -1,6 +1,6 @@
 <script setup>
-import SeminarNow from "../components/seminar/SeminarNow.vue";
-import SeminarReocrds from "../components/seminar/SeminarReocrds.vue";
+import SeminarNow from "../../components/seminar/SeminarNow.vue";
+import SeminarReocrds from "../../components/seminar/SeminarReocrds.vue";
 </script>
 
 <template>
