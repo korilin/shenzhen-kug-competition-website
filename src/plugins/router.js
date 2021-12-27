@@ -1,6 +1,6 @@
 import HomePage from "../pages/HomePage.vue";
 import AuthPage from "../pages/AuthPage.vue";
-import PrivacyPolicy from "../pages/PrivacyPolicy.vue"
+import Policies from "../pages/Policies.vue"
 import Seminars from "../pages/seminar/Seminars.vue";
 import Seminar from "../pages/seminar/Seminar.vue";
 import Conquerors from "../pages/Conquerors.vue";
@@ -10,7 +10,7 @@ import { createRouter, createWebHistory } from "vue-router";
 const routes = [
     { path: "/auth", component: AuthPage },
     { path: "/", component: HomePage },
-    { path: "/privacy-policy", component: PrivacyPolicy },
+    { path: "/policies", component: Policies },
     { path: "/seminars", component: Seminars },
     { path: "/seminar", component: Seminar },
     { path: "/conquerors", component: Conquerors },
