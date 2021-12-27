@@ -1,7 +1,12 @@
+<script setup>
+import PrivacyPolicy from "../assets/privacy-policy.md"
+
+</script>
 <template>
     <div id="privacy-policy">
         <h1>Shenzhen Kotlin User Group 站点隐私政策</h1>
-        
+
+        <PrivacyPolicy />
     </div>
 </template>
 

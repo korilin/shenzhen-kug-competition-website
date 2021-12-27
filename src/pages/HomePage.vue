@@ -4,7 +4,7 @@ const userGroupListName = "Kotlin User Groups List (kotlinlang.org)"
 
 const events = {
     "Thematic Seminar": "社区每隔一段时间发起的 Kotlin 主题交流会，Kotlin 爱好者进行 Kotlin 相关主题的技术分享，参与者可对分享内容进行讨论",
-    "Kotlin Conqueror 竞赛": "一个综合的 Kotlin 竞赛活动，考验 Kotlin 开发者的开发技巧和算法能力（开发中）"
+    "Kotlin Conqueror 竞赛": "一个综合的 Kotlin 竞赛活动（开发中）"
 }
 
 const welcome = "欢迎来到深圳 Kotlin User Group 站点，这里是 Kotlin 爱好者的聚集地"
