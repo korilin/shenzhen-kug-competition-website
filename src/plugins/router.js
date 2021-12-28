@@ -1,6 +1,8 @@
 import HomePage from "../pages/HomePage.vue";
 import AuthPage from "../pages/AuthPage.vue";
-import Seminars from "../pages/Seminars.vue";
+import Policies from "../pages/Policies.vue"
+import Seminars from "../pages/seminar/Seminars.vue";
+import Seminar from "../pages/seminar/Seminar.vue";
 import Conquerors from "../pages/Conquerors.vue";
 import NotFound from "../pages/404.vue"
 import { createRouter, createWebHistory } from "vue-router";
@@ -8,8 +10,9 @@ import { createRouter, createWebHistory } from "vue-router";
 const routes = [
     { path: "/auth", component: AuthPage },
     { path: "/", component: HomePage },
+    { path: "/policies", component: Policies },
     { path: "/seminars", component: Seminars },
-    { path: "/seminar", component: Seminars },
+    { path: "/seminar", component: Seminar },
     { path: "/conquerors", component: Conquerors },
     { path: "/:pathMatch(.*)", component: NotFound }
 ];

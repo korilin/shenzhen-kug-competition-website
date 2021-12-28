@@ -29,8 +29,8 @@ function openNewTab(url) {
         <p style="text-align: center; margin-top: 40px;">
             <el-button
                 type="primary"
-                :disabled="seminar.bilibiliUrl == null"
-                @click="openNewTab(seminar.bilibiliUrl)"
+                :disabled="seminar.videoUrl == null"
+                @click="openNewTab(seminar.videoUrl)"
             >
                 <span style="position: relative; top: -3px;">观看回放视频</span>
 

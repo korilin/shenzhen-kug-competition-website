@@ -30,7 +30,14 @@ body {
     font-family: Avenir, Helvetica, Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    color: #2c3e50;
+    color: #2c3e50e6;
+    line-height: 1.5;
+}
+
+.md2vue-wrapper {
+ li {
+     margin-bottom: 10px;
+ }
 }
 
 .el-main {

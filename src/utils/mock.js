@@ -21,7 +21,7 @@ const getSeminarRecords = function () {
             themes: [random.ctitle()],
             description: random.sentence(30, 50),
             eventTime: new Date().getTime(),
-            bilibiliUrl: random.boolean
+            videoUrl: random.boolean
                 ? "https://www.bilibili.com/video/BV1K3411t7Uy"
                 : null,
         });
