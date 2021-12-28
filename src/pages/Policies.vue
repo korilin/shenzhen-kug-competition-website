@@ -1,5 +1,5 @@
 <script setup>
-import PrivacyPolicy from "../assets/privacy-policy.md"
+import PrivacyPolicy from "../assets/md/privacy-policy.md"
 
 </script>
 <template>
