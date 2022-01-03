@@ -3,7 +3,8 @@ import AuthPage from "../pages/AuthPage.vue";
 import Policies from "../pages/Policies.vue"
 import Seminars from "../pages/seminar/Seminars.vue";
 import Seminar from "../pages/seminar/Seminar.vue";
-import Conquerors from "../pages/Conquerors.vue";
+import Conquerors from "../pages/conquerors/Conquerors.vue";
+import Playground from "../pages/conquerors/Playground.vue";
 import NotFound from "../pages/404.vue"
 import { createRouter, createWebHistory } from "vue-router";
 
@@ -13,6 +14,7 @@ const routes = [
     { path: "/policies", component: Policies },
     { path: "/seminars", component: Seminars },
     { path: "/seminar", component: Seminar },
+    { path: "/playground", component: Playground },
     { path: "/conquerors", component: Conquerors },
     { path: "/:pathMatch(.*)", component: NotFound }
 ];

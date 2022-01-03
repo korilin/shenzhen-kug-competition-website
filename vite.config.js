@@ -6,6 +6,7 @@ import { ElementPlusResolver } from "unplugin-vue-components/resolvers";
 
 import vitePluginMd2Vue from "vite-plugin-md2vue";
 
+
 // https://vitejs.dev/config/
 export default defineConfig({
     plugins: [
