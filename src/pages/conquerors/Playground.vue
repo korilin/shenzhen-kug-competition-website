@@ -1,11 +1,21 @@
+<script setup>
+import { CaretRight,Setting } from '@element-plus/icons-vue'
 
+const running = ref(false)
+
+</script>
 <template>
+    <div class="tools">
+        <el-button type="primary" size="small" :icon="CaretRight" :loading="running">Run</el-button>
+        <el-button :icon="Setting" :loading="running"></el-button>
+    </div>
     <div id="editor" ref="editor"></div>
 </template>
 
 <script>
 import * as monaco from 'monaco-editor';
 import editorWorker from 'monaco-editor/esm/vs/editor/editor.worker?worker'
+import { ref } from 'vue';
 
 self.MonacoEnvironment = {
     getWorker(_, label) {
@@ -18,7 +28,7 @@ export default {
     async mounted() {
         const el = this.$refs.editor;
         this.editor = monaco.editor.create(el, {
-            value: "fun main() {\n\tprintln('Hello world!');\n}",
+            value: `fun main() {\n\tprintln("Hello world!");\n}`,
             language: 'kotlin',
 
             scrollbar: {
@@ -45,8 +55,18 @@ export default {
     background: coral;
 }
 
-#editor {
+.tools {
+    display: flex;
     margin: 20px auto;
+    padding: 0 50px;
+    flex-direction: row-reverse;
+
+    .el-button {
+        margin: 0 10px;
+    }
+}
+
+#editor {
     width: 100%;
     height: 80vh
 }
