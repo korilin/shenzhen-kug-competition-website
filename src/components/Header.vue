@@ -6,6 +6,7 @@ const linklist = {
     "主页": "/",
     "Thematic Seminar": "/seminars",
     "Kotlin Conquerors": "/conquerors",
+    "Playground": "/playground",
 }
 const activeIndex = ref(window.location.pathname)
 
