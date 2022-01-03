@@ -1,14 +1,24 @@
 <script setup>
-import { CaretRight,Setting } from '@element-plus/icons-vue'
+import { CaretRight, Setting } from '@element-plus/icons-vue'
+
+const versions = ["1.6.10", "1.5.30"]
 
 const running = ref(false)
+const version = ref(versions[0])
 
 </script>
 <template>
     <div class="tools">
         <el-button type="primary" size="small" :icon="CaretRight" :loading="running">Run</el-button>
-        <el-button :icon="Setting" :loading="running"></el-button>
+        <el-select v-model="version" placeholder="版本选择">
+            <el-option
+                v-for="v in versions"
+                :key="v"
+                :value="v"
+            />
+        </el-select>
     </div>
+
     <div id="editor" ref="editor"></div>
 </template>
 
@@ -59,7 +69,20 @@ export default {
     display: flex;
     margin: 20px auto;
     padding: 0 50px;
-    flex-direction: row-reverse;
+
+    .el-button {
+        margin: 0 10px;
+    }
+}
+.wrap {
+    height: 100%;
+    background: coral;
+}
+
+.tools {
+    display: flex;
+    margin: 20px auto;
+    padding: 0 50px;
 
     .el-button {
         margin: 0 10px;
@@ -68,6 +91,6 @@ export default {
 
 #editor {
     width: 100%;
-    height: 80vh
+    height: 80vh;
 }
 </style>
