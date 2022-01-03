@@ -11,11 +11,7 @@ const version = ref(versions[0])
     <div class="tools">
         <el-button type="primary" size="small" :icon="CaretRight" :loading="running">Run</el-button>
         <el-select v-model="version" placeholder="版本选择">
-            <el-option
-                v-for="v in versions"
-                :key="v"
-                :value="v"
-            />
+            <el-option v-for="v in versions" :key="v" :value="v" />
         </el-select>
     </div>
 
@@ -49,7 +45,7 @@ export default {
                 horizontalHasArrows: false
             },
             minimap: {
-                enabled: true,
+                enabled: false,
             },
             formatOnPaste: true,
             renderValidationDecorations: 'on',
@@ -92,5 +88,25 @@ export default {
 #editor {
     width: 100%;
     height: 80vh;
+}
+</style>
+
+<style  lang="scss">
+.monaco-editor,
+.monaco-scrollable-element,
+.overflow-guard {
+    width: 100% !important;
+    height: 100% !important;
+}
+
+.view-lines,
+.current-line,
+.lines-content {
+    width: calc(100% - 70px) !important;
+    height: 100% !important;
+}
+
+.decorationsOverviewRuler {
+    display: none;
 }
 </style>
