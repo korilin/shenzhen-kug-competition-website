@@ -20,7 +20,7 @@ for (var index in footerHiddenRegular) {
         <el-header>
             <Header />
         </el-header>
-        <el-main>
+        <el-main :class="showFooter?'has-footer':''">
             <router-view />
         </el-main>
         <el-footer v-if="showFooter">
@@ -51,6 +51,10 @@ body {
 }
 
 .el-main {
+    height: 100%;
+}
+
+.has-footer {
     margin-bottom: 210px;
 }
 
@@ -65,5 +69,9 @@ body {
     bottom: 0px;
     width: 100%;
     height: auto !important;
+}
+
+.el-container {
+    height: 100% !important;
 }
 </style>

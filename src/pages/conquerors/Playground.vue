@@ -18,26 +18,36 @@ export default {
     async mounted() {
         const el = this.$refs.editor;
         this.editor = monaco.editor.create(el, {
-            value: "fun main() {\n\println('Hello world!');\n}",
+            value: "fun main() {\n\tprintln('Hello world!');\n}",
             language: 'kotlin',
 
             scrollbar: {
                 arrowSize: 5,
-                verticalScrollbarSize: 8,
-                horizontalScrollbarSize: 8,
+                vertical: 'auto',
+                horizontal: 'hidden',
+                verticalScrollbarSize: 5,
+                horizontalHasArrows: false
             },
             minimap: {
                 enabled: true,
             },
             formatOnPaste: true,
             renderValidationDecorations: 'on',
+            scrollBeyondLastLine: false
         })
     },
 };
 </script>
 
 <style lang="scss" scoped>
+.wrap {
+    height: 100%;
+    background: coral;
+}
+
 #editor {
-    height: 50vh;
+    margin: 20px auto;
+    width: 100%;
+    height: 80vh
 }
 </style>
