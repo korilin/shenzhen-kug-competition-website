@@ -1,8 +1,18 @@
 <script setup>
-// This starter template is using Vue 3 <script setup> SFCs
-// Check out https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup
 import Header from "./components/Header.vue"
 import Footer from "./components/Footer.vue"
+import { ref } from "vue";
+
+
+var showFooter = ref(true)
+
+const footerHiddenRegular = ['/playground']
+for (var index in footerHiddenRegular) {
+    if (window.location.pathname.includes(footerHiddenRegular[index])) {
+        showFooter.value = false;
+        break;
+    }
+}
 </script>
 
 <template>
@@ -13,7 +23,7 @@ import Footer from "./components/Footer.vue"
         <el-main>
             <router-view />
         </el-main>
-        <el-footer>
+        <el-footer v-if="showFooter">
             <Footer />
         </el-footer>
     </el-container>
@@ -35,9 +45,9 @@ body {
 }
 
 .md2vue-wrapper {
- li {
-     margin-bottom: 10px;
- }
+    li {
+        margin-bottom: 10px;
+    }
 }
 
 .el-main {
