@@ -1,6 +1,7 @@
 # shenzhen-kug-website
 
 深圳 Kotlin User Group 站点
+（开发中，未部署，最新代码查看 feature 1.0）
 
 ## 开发方案
 
