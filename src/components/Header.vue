@@ -1,10 +1,12 @@
 <script setup>
 import { ref } from '@vue/reactivity';
+import router from "../plugins/router";
 
 const linklist = {
     "主页": "/",
     "Thematic Seminar": "/seminars",
     "Kotlin Conquerors": "/conquerors",
+    "Playground": "/playground",
 }
 const activeIndex = ref(window.location.pathname)
 
@@ -12,6 +14,11 @@ const activeIndex = ref(window.location.pathname)
 function handleSelect(key, keyPath) {
     // console.log(key, keyPath ,activeIndex);
 }
+
+router.beforeResolve(to => {
+    activeIndex.value = to.path
+})
+
 </script>
 
 <template>

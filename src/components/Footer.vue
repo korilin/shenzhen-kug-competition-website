@@ -1,17 +1,17 @@
 <script setup>
 const infos = {
     "组建日期": "2021年",
-    "活动方式": "QQ群组",
+    "活动方式": "QQ群组/QQ频道",
     "QQ群号": "811981478",
 }
-const me = {
-    link: "https://github.com/korilin",
-    text: "@korilin"
+const github = {
+    link: "https://github.com/shenzhen-kug",
+    text: "@shenzhen-kug"
 }
 
-const github = {
-    link: "https://github.com/shenzhen-kug/shenzhen-kug-website-v2",
-    text: "shenzhen-kug-website"
+const policies = {
+    link: "/policies",
+    text: "隐私政策与服务条款"
 }
 
 const icp = {
@@ -20,8 +20,8 @@ const icp = {
 }
 
 const links = {
-    "组建人": me,
-    "站点源码": github,
+    "GitHub": github,
+    "See Policies": policies,
     "备案号": icp
 }
 </script>

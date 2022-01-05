@@ -11,6 +11,7 @@
 | build tool | [vite](https://vitejs.dev/) |
 | css loader | scss |
 | ui libary | [element plus](https://element-plus.gitee.io/zh-CN/) |
+| code editor | [Monaco Editor](https://microsoft.github.io/monaco-editor/) |
 
 also see [package.json](./package.json)
 
