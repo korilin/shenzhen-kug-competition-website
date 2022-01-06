@@ -2661,6 +2661,11 @@ kleur@^3.0.3:
   resolved "https://registry.yarnpkg.com/kleur/-/kleur-3.0.3.tgz#a79c9ecc86ee1ce3fa6206d1216c501f147fc07e"
   integrity sha512-eTIzlVOSUR+JxdDFepEYcBMtZ9Qqdef+rnzWdRZuMbOywu5tO2w2N7rqjoANZ5k9vywhL6Br1VRjUIgTQx4E8w==
 
+kotlin-playground@^1.27.0:
+  version "1.27.0"
+  resolved "https://registry.yarnpkg.com/kotlin-playground/-/kotlin-playground-1.27.0.tgz#85f43781274dd51731a53c8aab2ecff435d23f90"
+  integrity sha512-yoWilpb7Ln0s036MYoml/xmAflF/oYfEWYY5dD9ZF4bGHdh6+cq1CyvH7k7b1dczZ1lr1eT3rOfdt6Vq9kH+/g==
+
 leven@^3.1.0:
   version "3.1.0"
   resolved "https://registry.yarnpkg.com/leven/-/leven-3.1.0.tgz#77891de834064cccba82ae7842bb6b14a13ed7f2"
