@@ -12,4 +12,5 @@ fun Color.hex(value: String) = HEX(value)
 object AppColors {
     val lineColor = Color.gray
     val fontColor = Color.hex("#27282c")
+    val primaryColor = Color.hex("#2196f3")
 }
