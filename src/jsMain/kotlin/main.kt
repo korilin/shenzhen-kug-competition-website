@@ -1,10 +1,14 @@
-import androidx.compose.runtime.mutableStateOf
-import androidx.compose.runtime.getValue
-import androidx.compose.runtime.setValue
-import org.jetbrains.compose.web.css.*
-import org.jetbrains.compose.web.dom.*
+
+import component.KUGFooter
+import component.KUGHeader
 import org.jetbrains.compose.web.renderComposable
+import view.home.HomeView
 
 fun main() {
 
+    renderComposable(rootElementId = "root") {
+        KUGHeader()
+        HomeView()
+        KUGFooter()
+    }
 }

@@ -1,0 +1,4 @@
+package global
+
+object KUGInfo {
+}
