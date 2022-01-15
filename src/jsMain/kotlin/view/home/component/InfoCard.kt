@@ -1,15 +1,17 @@
 package view.home.component
 
 import androidx.compose.runtime.Composable
-import component.Card
 import global.KUGInfo
 import org.jetbrains.compose.web.css.*
 import org.jetbrains.compose.web.dom.*
+import style.AppStylesheet
 
 @Composable
-fun InfoCard(kugInfo: KUGInfo = KUGInfo) = Card {
+fun InfoCard(kugInfo: KUGInfo = KUGInfo) = Div({
+    classes(AppStylesheet.card)
+    style { padding(30.px) }
+}) {
     Div({
-        classes( )
         style { marginBottom(20.px) }
     }) { Text(kugInfo.description) }
     Div({}) {
