@@ -20,7 +20,7 @@ import SeminarReocrds from "../../components/seminar/SeminarReocrds.vue";
 
 <style lang="scss" scoped>
 .wrap {
-    max-width: 900px;
+    max-width: 1080px;
     margin: auto;
 }
 
