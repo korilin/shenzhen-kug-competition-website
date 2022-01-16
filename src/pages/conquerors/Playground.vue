@@ -1,10 +1,19 @@
 <script setup>
 import { CaretRight, Setting } from '@element-plus/icons-vue'
+import httpTool from '../../utils/http-tool';
 
 const versions = ["1.6.10", "1.5.30"]
+const platforms = ["JVM", "JS", "Native"]
 
 const running = ref(false)
 const version = ref(versions[0])
+const platform = ref(platforms[0])
+
+const run = function () {
+    httpTool.post(playground_run, {}).then((response) => {
+        
+    })
+}
 
 </script>
 <template>
@@ -12,6 +21,9 @@ const version = ref(versions[0])
         <el-button type="primary" size="small" :icon="CaretRight" :loading="running">Run</el-button>
         <el-select v-model="version" placeholder="版本选择">
             <el-option v-for="v in versions" :key="v" :value="v" />
+        </el-select>
+        <el-select v-model="platform" placeholder="平台选择">
+            <el-option v-for="p in platforms" :key="p" :value="p" />
         </el-select>
     </div>
 
@@ -66,7 +78,8 @@ export default {
     margin: 20px auto;
     padding: 0 50px;
 
-    .el-button {
+    .el-button,
+    .el-select {
         margin: 0 10px;
     }
 }

@@ -2,17 +2,23 @@
 import Header from "./components/Header.vue"
 import Footer from "./components/Footer.vue"
 import { ref } from "vue";
+import router from "./plugins/router";
 
 
 var showFooter = ref(true)
 
+
 const footerHiddenRegular = ['/playground']
-for (var index in footerHiddenRegular) {
-    if (window.location.pathname.includes(footerHiddenRegular[index])) {
-        showFooter.value = false;
-        break;
+router.beforeEach(to => {
+    for (var index in footerHiddenRegular) {
+        if (to.path == footerHiddenRegular[index]) {
+            showFooter.value = false;
+            return;
+        }
     }
-}
+    showFooter.value = true;
+})
+
 </script>
 
 <template>
@@ -20,7 +26,7 @@ for (var index in footerHiddenRegular) {
         <el-header>
             <Header />
         </el-header>
-        <el-main :class="showFooter?'has-footer':''">
+        <el-main :class="showFooter ? 'has-footer' : ''">
             <router-view />
         </el-main>
         <el-footer v-if="showFooter">
