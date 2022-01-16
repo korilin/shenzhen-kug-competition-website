@@ -27,13 +27,21 @@ private fun AttrsBuilder<HTMLDivElement>.entryAnimation(delay: CSSSizeValue<out 
 fun HomeView() = Div({
     classes(AppStylesheet.homeView)
 }) {
-    Banner()
-    KUGLogoAndInfo()
+    Div({
+        entryAnimation(0.3.s)
+    }) {
+        LogoAndBanner()
+    }
+    Div({
+        entryAnimation(0.6.s)
+    }) {
+        InfoCard()
+    }
 }
 
 
 @Composable
-private fun KUGLogoAndInfo() = Div({
+private fun LogoAndBanner() = Div({
     style {
         display(DisplayStyle.Flex)
         justifyContent(JustifyContent.Center)
@@ -44,8 +52,8 @@ private fun KUGLogoAndInfo() = Div({
     Div({
         style {
             width(40.percent)
-            maxWidth(450.px)
-            minWidth(400.px)
+            maxWidth(400.px)
+            minWidth(300.px)
             textAlign(TextAlign.center)
         }
     }) {
@@ -59,6 +67,11 @@ private fun KUGLogoAndInfo() = Div({
             width(60.percent)
         }
     }) {
-        InfoCard()
+        Banner()
     }
+}
+
+@Composable
+private fun InfoCardList() = Div {
+
 }

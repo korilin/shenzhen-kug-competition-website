@@ -3,20 +3,15 @@ package view.home.component
 import androidx.compose.runtime.Composable
 import global.KUGInfo
 import org.jetbrains.compose.web.css.*
-import org.jetbrains.compose.web.dom.Div
-import org.jetbrains.compose.web.dom.H1
-import org.jetbrains.compose.web.dom.H2
-import org.jetbrains.compose.web.dom.Text
+import org.jetbrains.compose.web.dom.*
 import style.AppColors
-import style.AppStylesheet.style
-import style.TextAlign
+
 
 @Composable
 fun Banner() = Div({
     style {
-        marginTop(80.px)
         marginBottom(80.px)
-        textAlign(TextAlign.center)
+    }
 }) {
     H1({
         style {

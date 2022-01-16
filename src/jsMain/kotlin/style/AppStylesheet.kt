@@ -20,4 +20,8 @@ object AppStylesheet : StyleSheet() {
         background("#fff")
         property("box-shadow", shadow)
     }
+
+    val homeView by style {
+        marginTop(10.vh)
+    }
 }
