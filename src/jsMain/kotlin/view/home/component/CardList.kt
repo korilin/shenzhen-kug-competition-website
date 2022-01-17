@@ -40,13 +40,12 @@ fun CardList(
         }) {
             Div({
                 style {
-                    property("transition", "all 0.8s ease-in-out")
-                    padding(30.px)
+                    property("transition", "all 0.5s ease-in-out")
                     position(Position.Absolute)
-                    width(100.percent)
+                    padding(30.px)
+                    property("width", "calc(100% - 60px)")
                     if (!show.value) {
                         opacity(0)
-                        width(60.px)
                     }
                 }
             }, contents[index])
