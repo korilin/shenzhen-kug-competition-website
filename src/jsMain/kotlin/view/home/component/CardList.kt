@@ -38,17 +38,27 @@ fun CardList(
                 showItem = show
             }
         }) {
-            Div({
-                style {
-                    property("transition", "all 0.5s ease-in-out")
-                    position(Position.Absolute)
-                    padding(30.px)
-                    property("width", "calc(100% - 60px)")
-                    if (!show.value) {
-                        opacity(0)
-                    }
-                }
-            }, contents[index])
+            CardInner(contents[index], show)
         }
     }
+}
+
+@Composable
+private fun CardInner(content: ContentBuilder<HTMLDivElement>, show: MutableState<Boolean>) = Div(
+    {
+        style {
+            property("transition", "all 0.5s ease-in-out")
+            position(Position.Absolute)
+            padding(30.px)
+            property("width", "calc(100% - 60px)")
+            if (!show.value) {
+                opacity(0)
+            }
+        }
+    }, content
+)
+
+@Composable
+private fun IconAndMessage() {
+
 }
