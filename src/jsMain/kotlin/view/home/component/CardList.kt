@@ -43,7 +43,7 @@ fun CardList(
                     property("transition", "all 0.8s ease-in-out")
                     padding(30.px)
                     position(Position.Absolute)
-                    backgroundColor(Color.blue)
+                    width(100.percent)
                     if (!show.value) {
                         opacity(0)
                         width(60.px)
