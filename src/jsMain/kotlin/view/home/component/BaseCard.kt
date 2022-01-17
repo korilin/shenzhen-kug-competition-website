@@ -31,6 +31,7 @@ fun BaseCard(
 }) {
     val index = remember { mutableStateOf(0) }
 
+    LeftCard(unChangeContent)
 
     Div({
         style {
@@ -38,5 +39,43 @@ fun BaseCard(
         }
     }, infoContents[index.value])
 
+    RightSwiper(index, infoContents.size)
 }
 
+@Composable
+private fun LeftCard(unChangeContent: ContentBuilder<HTMLDivElement>) = Div({
+    classes(AppStylesheet.card)
+    style {
+        height(250.px)
+        width(250.px)
+        property("box-shadow", "4px 13px 30px 1px #8ec5fc")
+        property("transform", "translateX(-80px)")
+    }
+}, unChangeContent)
+
+@Composable
+private fun RightSwiper(index: MutableState<Int>, size: Int) = Div({
+    style {
+        position(Position.Absolute)
+        right(20.px)
+        width(11.px)
+        textAlign(TextAlign.center)
+    }
+}) {
+    repeat(size) {
+        Span({
+            style {
+                display(DisplayStyle.InlineBlock)
+                width(11.px)
+                height(11.px)
+                borderRadius(10.px)
+                margin(8.px, 0.px)
+                backgroundColor(AppColors.blueGrey)
+                if (index.value == it) {
+                    height(30.px)
+                    backgroundColor(AppColors.primaryColor)
+                }
+            }
+        })
+    }
+}
