@@ -1,14 +1,16 @@
 package view.home
 
 import androidx.compose.runtime.Composable
+import global.KUGInfo
 import org.jetbrains.compose.web.attributes.AttrsBuilder
 import org.jetbrains.compose.web.css.*
-import org.jetbrains.compose.web.dom.ContentBuilder
 import org.jetbrains.compose.web.dom.Div
+import org.jetbrains.compose.web.dom.Text
 import org.w3c.dom.HTMLDivElement
 import style.Animations
-import style.AppStylesheet
-import style.TextAlign
+import view.home.component.BaseCard
+import view.home.component.KUGBanner
+import view.home.component.KUGLogo
 
 private fun AttrsBuilder<HTMLDivElement>.entryAnimation(delay: CSSSizeValue<out CSSUnitTime>) = style {
     position(Position.Relative)
@@ -21,14 +23,6 @@ private fun AttrsBuilder<HTMLDivElement>.entryAnimation(delay: CSSSizeValue<out 
     }
 }
 
-private interface CardAdapter {
-
-}
-
-@Composable
-private fun CardAdapter() {
-
-}
 
 /**
  * Page Design From:
@@ -45,49 +39,10 @@ fun HomeView() = Div({
         alignItems(AlignItems.Center)
     }
 }) {
-    BaseCard()
+    BaseCard({ KUGLogo() }, arrayOf(
+        { KUGBanner() },
+        { Text(KUGInfo.description) },
+        {  })
+    )
 }
 
-@Composable
-fun BaseCard() = Div({
-    classes(AppStylesheet.card)
-    style {
-        height(400.px)
-        width(90.percent)
-        maxWidth(850.px)
-        position(Position.Relative)
-        display(DisplayStyle.Flex)
-        padding(20.px)
-        alignItems(AlignItems.Center)
-    }
-}) {
-    Div({
-        classes(AppStylesheet.card)
-        style {
-            height(300.px)
-            width(300.px)
-            property("box-shadow", "4px 13px 30px 1px #8ec5fc")
-            property("transform", "translateX(-80px)")
-        }
-    }) {
-
-    }
-    Div({
-        style {
-            backgroundColor(Color.white)
-        }
-    }) {
-
-    }
-    Div({
-        style {
-            position(Position.Absolute)
-            right(20.px)
-            width(15.px)
-            textAlign(TextAlign.center)
-
-        }
-    }){
-        
-    }
-}

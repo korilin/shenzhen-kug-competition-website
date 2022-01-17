@@ -8,6 +8,7 @@ object AppStylesheet : StyleSheet() {
     init {
         "*" style {
             color(AppColors.fontColor)
+            fontFamily("Fira Sans")
         }
         "body" style {
             margin(0.px)
