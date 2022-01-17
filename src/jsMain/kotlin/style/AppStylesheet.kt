@@ -9,9 +9,9 @@ object AppStylesheet : StyleSheet() {
         "*" style {
             color(AppColors.fontColor)
         }
-
         "body" style {
-            backgroundImage("url(background.jpg)")
+            margin(0.px)
+            padding(0.px)
         }
     }
 
@@ -20,7 +20,6 @@ object AppStylesheet : StyleSheet() {
     val card by style {
         className("common-card")
         padding(30.px)
-        margin(5.px)
         borderRadius(20.px)
         background("#fff")
         property("box-shadow", shadow)

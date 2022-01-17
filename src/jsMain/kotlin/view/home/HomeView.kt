@@ -1,19 +1,14 @@
 package view.home
 
 import androidx.compose.runtime.Composable
-import global.KUGInfo
 import org.jetbrains.compose.web.attributes.AttrsBuilder
-import org.jetbrains.compose.web.attributes.DirType
 import org.jetbrains.compose.web.css.*
-import org.jetbrains.compose.web.css.keywords.auto
-import org.jetbrains.compose.web.dom.*
+import org.jetbrains.compose.web.dom.ContentBuilder
+import org.jetbrains.compose.web.dom.Div
 import org.w3c.dom.HTMLDivElement
-import org.w3c.dom.HTMLParagraphElement
 import style.Animations
-import style.Animations.hover
 import style.AppStylesheet
 import style.TextAlign
-import view.home.component.*
 
 private fun AttrsBuilder<HTMLDivElement>.entryAnimation(delay: CSSSizeValue<out CSSUnitTime>) = style {
     position(Position.Relative)
@@ -26,59 +21,73 @@ private fun AttrsBuilder<HTMLDivElement>.entryAnimation(delay: CSSSizeValue<out 
     }
 }
 
-@Composable
-fun HomeView() = Div({
-    classes(AppStylesheet.homeView)
-}) {
-    Div({
-        entryAnimation(0.3.s)
-    }) {
-        LogoAndBanner()
-    }
-    Div({
-        entryAnimation(0.6.s)
-        style {
-            property("margin", "auto")
-            marginTop(10.vh)
-            maxWidth(80.percent)
-        }
-    }) {
-        CardList(arrayOf(
-            { Text(KUGInfo.description) },
-            { QQUl() },
-            { Buttons() }
-        ))
-    }
+private interface CardAdapter {
+
 }
 
-
 @Composable
-private fun LogoAndBanner() = Div({
+private fun CardAdapter() {
+
+}
+
+/**
+ * Page Design From:
+ * https://codepen.io/JavaScriptJunkie/pen/WgRBxw
+ */
+@Composable
+fun HomeView() = Div({
     style {
+        minHeight(100.vh)
+        minWidth(100.vw)
+        background("linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%)")
         display(DisplayStyle.Flex)
         justifyContent(JustifyContent.Center)
         alignItems(AlignItems.Center)
-        flexWrap(FlexWrap.Wrap)
+    }
+}) {
+    BaseCard()
+}
+
+@Composable
+fun BaseCard() = Div({
+    classes(AppStylesheet.card)
+    style {
+        height(400.px)
+        width(90.percent)
+        maxWidth(850.px)
+        position(Position.Relative)
+        display(DisplayStyle.Flex)
+        padding(20.px)
+        alignItems(AlignItems.Center)
     }
 }) {
     Div({
+        classes(AppStylesheet.card)
         style {
+            height(300.px)
             width(300.px)
-            paddingRight(20.px)
-            paddingLeft(20.px)
-            textAlign(TextAlign.left)
+            property("box-shadow", "4px 13px 30px 1px #8ec5fc")
+            property("transform", "translateX(-80px)")
         }
     }) {
-        KUGLogo()
+
     }
     Div({
         style {
-            width(67.percent)
-            marginTop(20.px)
-            minWidth(300.px)
-            maxWidth(800.px)
+            backgroundColor(Color.white)
         }
     }) {
-        Banner()
+
+    }
+    Div({
+        style {
+            position(Position.Absolute)
+            right(20.px)
+            width(15.px)
+            textAlign(TextAlign.center)
+
+        }
+    }){
+        
     }
 }
