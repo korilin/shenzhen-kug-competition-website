@@ -1,7 +1,6 @@
 package style
 
 import org.jetbrains.compose.web.css.*
-import org.jetbrains.compose.web.css.selectors.CSSSelector
 
 
 object AppStylesheet : StyleSheet() {
@@ -26,29 +25,22 @@ object AppStylesheet : StyleSheet() {
         marginTop(10.vh)
     }
 
-    val homeViewCardSubTitle by style {
-        textAlign(TextAlign.center)
-        marginTop(20.px)
-        fontWeight(600)
+    val cardListItem by style {
+        borderRadius(30.px)
+        minHeight(300.px)
+        property("transition", "all 0.8s ease-in-out")
+        margin(10.px)
+        padding(0.px)
+        overflow("hidden")
+        position(Position.Relative)
+    }
 
-        fun CSSBuilder.localCommon() {
-            width(30.px)
-            height(2.px)
-            backgroundColor(AppColors.primaryColor)
-            display(DisplayStyle.InlineBlock)
-            property("content", "''")
-        }
+    val cardListItemShow by style {
+        flexGrow(1)
+    }
 
-        hover {
-            color(AppColors.primaryColor)
-        }
-
-        before {
-            localCommon()
-        }
-
-        after {
-            localCommon()
-        }
+    val cardListItemHide by style {
+        width(60.px)
+        minWidth(60.px)
     }
 }

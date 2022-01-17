@@ -8,14 +8,10 @@ import style.AppColors
 
 
 @Composable
-fun Banner() = Div({
-    style {
-        marginBottom(80.px)
-    }
-}) {
+fun Banner() {
     H1({
         style {
-            fontSize(55.px)
+            fontSize(42.px)
             marginBottom(0.px)
             color(AppColors.primaryColor)
         }
@@ -23,7 +19,8 @@ fun Banner() = Div({
     H2({
         style {
             marginTop(15.px)
-            fontSize(36.px)
+            fontSize(24.px)
+            fontWeight(500)
         }
     }) { Text(KUGInfo.subTitle) }
 }

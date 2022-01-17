@@ -13,10 +13,7 @@ import style.Animations
 import style.Animations.hover
 import style.AppStylesheet
 import style.TextAlign
-import view.home.component.KUGLogo
-import view.home.component.Banner
-import view.home.component.InfoCard
-import view.home.component.QQCard
+import view.home.component.*
 
 private fun AttrsBuilder<HTMLDivElement>.entryAnimation(delay: CSSSizeValue<out CSSUnitTime>) = style {
     position(Position.Relative)
@@ -42,12 +39,15 @@ fun HomeView() = Div({
         entryAnimation(0.6.s)
         style {
             property("margin", "auto")
-            marginBottom(10.vh)
-            width(80.percent)
-            maxWidth(800.px)
+            marginTop(10.vh)
+            maxWidth(80.percent)
         }
     }) {
-        CardList()
+        CardList(arrayOf(
+            { Text(KUGInfo.description) },
+            { QQUl() },
+            { Buttons() }
+        ))
     }
 }
 
@@ -63,9 +63,7 @@ private fun LogoAndBanner() = Div({
 }) {
     Div({
         style {
-            width(40.percent)
-            maxWidth(400.px)
-            minWidth(300.px)
+            width(300.px)
             paddingRight(20.px)
             paddingLeft(20.px)
             textAlign(TextAlign.left)
@@ -75,23 +73,12 @@ private fun LogoAndBanner() = Div({
     }
     Div({
         style {
+            width(67.percent)
             marginTop(20.px)
             minWidth(300.px)
-            width(80.percent)
+            maxWidth(800.px)
         }
     }) {
         Banner()
-    }
-}
-
-@Composable
-private fun CardList() {
-    Div {
-        P({ classes(AppStylesheet.homeViewCardSubTitle) }) { Text("About") }
-        InfoCard()
-    }
-    Div({}) {
-        P({ classes(AppStylesheet.homeViewCardSubTitle) }) { Text("交流群") }
-        QQCard()
     }
 }
