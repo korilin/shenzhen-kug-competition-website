@@ -1,16 +1,22 @@
 package view.home
 
 import androidx.compose.runtime.Composable
+import global.KUGInfo
 import org.jetbrains.compose.web.attributes.AttrsBuilder
+import org.jetbrains.compose.web.attributes.DirType
 import org.jetbrains.compose.web.css.*
-import org.jetbrains.compose.web.dom.Div
+import org.jetbrains.compose.web.css.keywords.auto
+import org.jetbrains.compose.web.dom.*
 import org.w3c.dom.HTMLDivElement
+import org.w3c.dom.HTMLParagraphElement
 import style.Animations
+import style.Animations.hover
 import style.AppStylesheet
 import style.TextAlign
-import view.home.component.InfoCard
 import view.home.component.KUGLogo
 import view.home.component.Banner
+import view.home.component.InfoCard
+import view.home.component.QQCard
 
 private fun AttrsBuilder<HTMLDivElement>.entryAnimation(delay: CSSSizeValue<out CSSUnitTime>) = style {
     position(Position.Relative)
@@ -34,8 +40,14 @@ fun HomeView() = Div({
     }
     Div({
         entryAnimation(0.6.s)
+        style {
+            property("margin", "auto")
+            marginBottom(10.vh)
+            width(80.percent)
+            maxWidth(800.px)
+        }
     }) {
-        InfoCard()
+        CardList()
     }
 }
 
@@ -54,7 +66,9 @@ private fun LogoAndBanner() = Div({
             width(40.percent)
             maxWidth(400.px)
             minWidth(300.px)
-            textAlign(TextAlign.center)
+            paddingRight(20.px)
+            paddingLeft(20.px)
+            textAlign(TextAlign.left)
         }
     }) {
         KUGLogo()
@@ -62,9 +76,8 @@ private fun LogoAndBanner() = Div({
     Div({
         style {
             marginTop(20.px)
-            marginLeft(20.px)
-            minWidth(800.px)
-            width(60.percent)
+            minWidth(300.px)
+            width(80.percent)
         }
     }) {
         Banner()
@@ -72,6 +85,13 @@ private fun LogoAndBanner() = Div({
 }
 
 @Composable
-private fun InfoCardList() = Div {
-
+private fun CardList() {
+    Div {
+        P({ classes(AppStylesheet.homeViewCardSubTitle) }) { Text("About") }
+        InfoCard()
+    }
+    Div({}) {
+        P({ classes(AppStylesheet.homeViewCardSubTitle) }) { Text("交流群") }
+        QQCard()
+    }
 }

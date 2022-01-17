@@ -8,7 +8,6 @@ import style.AppStylesheet
 import view.home.HomeView
 
 fun main() {
-
     renderComposable(rootElementId = "root") {
         Style(AppStylesheet)
         Style(Animations)
