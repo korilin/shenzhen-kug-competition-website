@@ -12,34 +12,46 @@ import org.w3c.dom.HTMLDivElement
 import style.AppColors
 import style.AppStylesheet
 import style.TextAlign
+import kotlin.js.Date
 
 @Composable
 fun BaseCard(
     unChangeContent: ContentBuilder<HTMLDivElement>,
     infoContents: Array<ContentBuilder<HTMLDivElement>>,
-) = Div({
-    classes(AppStylesheet.card)
-    style {
-        height(400.px)
-        width(90.percent)
-        maxWidth(850.px)
-        position(Position.Relative)
-        display(DisplayStyle.Flex)
-        padding(20.px)
-        alignItems(AlignItems.Center)
-    }
-}) {
+) {
     val index = remember { mutableStateOf(0) }
-
-    LeftCard(unChangeContent)
-
+    var time = Date()
     Div({
+        classes(AppStylesheet.card)
         style {
-            overflow("hidden")
+            height(400.px)
+            width(90.percent)
+            maxWidth(850.px)
+            position(Position.Relative)
+            display(DisplayStyle.Flex)
+            padding(25.px)
+            alignItems(AlignItems.Center)
         }
-    }, infoContents[index.value])
 
-    RightSwiper(index, infoContents.size)
+        onWheel {
+            val newTime = Date()
+            if (newTime.getTime() - time.getTime() > 400) {
+                index.value += if (it.deltaY >= 0) 1 else -1
+            }
+            time = newTime
+        }
+    }) {
+
+        LeftCard(unChangeContent)
+
+        Div({
+            style {
+                overflow("hidden")
+            }
+        }, infoContents[index.value])
+
+        RightSwiper(index, infoContents.size)
+    }
 }
 
 @Composable
@@ -48,6 +60,7 @@ private fun LeftCard(unChangeContent: ContentBuilder<HTMLDivElement>) = Div({
     style {
         height(250.px)
         width(250.px)
+        minWidth(250.px)
         property("box-shadow", "4px 13px 30px 1px #8ec5fc")
         property("transform", "translateX(-80px)")
     }
@@ -57,24 +70,29 @@ private fun LeftCard(unChangeContent: ContentBuilder<HTMLDivElement>) = Div({
 private fun RightSwiper(index: MutableState<Int>, size: Int) = Div({
     style {
         position(Position.Absolute)
-        right(20.px)
+        right(15.px)
         width(11.px)
         textAlign(TextAlign.center)
     }
 }) {
-    repeat(size) {
+    repeat(size) { i ->
         Span({
             style {
-                display(DisplayStyle.InlineBlock)
+                display(DisplayStyle.Block)
                 width(11.px)
                 height(11.px)
                 borderRadius(10.px)
                 margin(8.px, 0.px)
-                backgroundColor(AppColors.blueGrey)
-                if (index.value == it) {
+                backgroundColor(AppColors.lineColor)
+                opacity(0.2)
+                property("transition", "all 0.3s")
+                if (index.value == i) {
                     height(30.px)
                     backgroundColor(AppColors.primaryColor)
                 }
+            }
+            onClick {
+                index.value = i
             }
         })
     }
