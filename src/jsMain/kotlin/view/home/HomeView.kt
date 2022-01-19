@@ -10,18 +10,6 @@ import org.w3c.dom.HTMLDivElement
 import style.Animations
 import view.home.component.*
 
-private fun AttrsBuilder<HTMLDivElement>.entryAnimation(delay: CSSSizeValue<out CSSUnitTime>) = style {
-    position(Position.Relative)
-    opacity(0)
-    animation(Animations.bannerEnterKeyframe) {
-        duration(1.0.s)
-        delay(delay)
-        iterationCount()
-        fillMode(AnimationFillMode.Forwards)
-    }
-}
-
-
 /**
  * Page Design From:
  * https://codepen.io/JavaScriptJunkie/pen/WgRBxw

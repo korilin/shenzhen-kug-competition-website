@@ -7,15 +7,4 @@ import org.jetbrains.compose.web.css.top
 
 object Animations : StyleSheet() {
 
-    val bannerEnterKeyframe by keyframes {
-        from {
-            opacity(0)
-            top(20.px)
-        }
-        to {
-            opacity(1)
-            top(0.px)
-        }
-    }
-
 }

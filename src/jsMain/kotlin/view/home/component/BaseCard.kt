@@ -30,7 +30,7 @@ fun BaseCard(
             position(Position.Relative)
             display(DisplayStyle.Flex)
             padding(20.px)
-            paddingRight(40.px)
+            paddingRight(50.px)
             alignItems(AlignItems.Center)
         }
 
@@ -49,10 +49,24 @@ fun BaseCard(
 
         Div({
             style {
+                position(Position.Relative)
+                height(100.percent)
                 overflow("hidden")
                 flexGrow(1)
             }
-        }, infoContents[index.value])
+        }) {
+            for (i in infoContents.indices) {
+                Div({
+                    classes(
+                        AppStylesheet.baseCardContent,
+                        if (i == index.value) AppStylesheet.baseCardContentShow
+                        else AppStylesheet.baseCardContentHide
+                    )
+                }) {
+                    Div({ style { width(100.percent) } }, infoContents[i])
+                }
+            }
+        }
 
         RightSwiper(index, infoContents.size)
     }

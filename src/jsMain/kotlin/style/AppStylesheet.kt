@@ -24,12 +24,6 @@ object AppStylesheet : StyleSheet() {
         property("box-shadow", "rgb(0 0 0 / 10%) 1px 1px 5px 0px, rgb(0 0 0 / 5%) 2px 2px 20px 5px")
     }
 
-    val baseCardContentShow by style {  }
-
-    val baseCardContentHide by style {
-        
-    }
-
     val button by style {
         display(DisplayStyle.Block)
         borderRadius(30.px)
@@ -53,5 +47,27 @@ object AppStylesheet : StyleSheet() {
         self + active style {
             opacity(0.7)
         }
+    }
+
+    val baseCardContent by style {
+        property("transition", "all 0.3s linear")
+        position(Position.Absolute)
+        height(100.percent)
+        width(100.percent)
+        display(DisplayStyle.Flex)
+        alignItems(AlignItems.Center)
+        opacity(1)
+        top(0.px)
+    }
+
+    val baseCardContentShow by style {
+        opacity(1)
+        top(0.px)
+        property("transition-delay", "0.3s")
+    }
+
+    val baseCardContentHide by style {
+        opacity(0)
+        top(30.px)
     }
 }
