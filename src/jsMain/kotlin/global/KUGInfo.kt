@@ -10,4 +10,5 @@ object KUGInfo {
         👉 QQ群：811981478
         👉 QQ频道：在群聊中向管理员要通行证
     """
+    const val github = "https://github.com/shenzhen-kug"
 }

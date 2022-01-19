@@ -1,6 +1,8 @@
 package view.home.component
 
 import androidx.compose.runtime.Composable
+import global.KUGInfo
+import kotlinx.browser.window
 import org.jetbrains.compose.web.css.*
 import org.jetbrains.compose.web.dom.*
 import style.AppColors
@@ -13,23 +15,25 @@ fun ButtonGroup() = Div({
         textAlign(TextAlign.center)
     }
 }) {
-    H3({ style { color(AppColors.primaryColor) } }) { Text("- more -") }
+    H3 { Text("- more -") }
     Button({
-        onClick { println("hi") }
+        onClick { window.open("https://seminar.shenzhen-kug.cn/") }
         classes(AppStylesheet.button)
     }) {
-        Text("Kotlin Seminar")
+        Text("研讨会（Kotlin Seminar）")
     }
     Button({
-        onClick { }
+        onClick { window.open("https://discuss.kotliner.cn/") }
         classes(AppStylesheet.button)
+        style { backgroundColor(AppColors.indigo) }
     }) {
-        Text("Kotlin Seminar")
+        Text("讨论社区")
     }
     Button({
-        onClick { }
+        onClick { window.open(KUGInfo.github) }
         classes(AppStylesheet.button)
+        style { backgroundColor(AppColors.dark) }
     }) {
-        Text("Kotlin Seminar")
+        Text("GitHub")
     }
 }

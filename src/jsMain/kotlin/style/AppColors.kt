@@ -15,7 +15,7 @@ object AppColors {
     val secondFontColor = Color.hex("#90a4ae")
     val primaryColor = Color.hex("2196f3")
 
-
+    val dark = Color.hex("161616")
     val red = Color.hex("f44336")
     val indigo = Color.hex("3f51b5")
     val teal = Color.hex("009688")
