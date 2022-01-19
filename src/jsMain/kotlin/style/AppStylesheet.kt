@@ -16,40 +16,42 @@ object AppStylesheet : StyleSheet() {
         }
     }
 
-    private const val shadow = "rgb(0 0 0 / 10%) 1px 1px 5px 0px, rgb(0 0 0 / 5%) 2px 2px 20px 5px"
-
     val card by style {
         className("common-card")
         padding(30.px)
         borderRadius(20.px)
         background("#fff")
-        property("box-shadow", shadow)
+        property("box-shadow", "rgb(0 0 0 / 10%) 1px 1px 5px 0px, rgb(0 0 0 / 5%) 2px 2px 20px 5px")
     }
 
-    val homeView by style {
-        className("home-view")
-        marginTop(10.vh)
+    val baseCardContentShow by style {  }
+
+    val baseCardContentHide by style {
+        
     }
 
-    val cardListItem by style {
-        className("home-card-list-item")
+    val button by style {
+        display(DisplayStyle.Block)
         borderRadius(30.px)
-        minHeight(300.px)
-        property("transition", "all 0.8s ease-in-out")
-        margin(10.px)
-        padding(0.px)
-        overflow("hidden")
-        position(Position.Relative)
-    }
+        color(Color.white)
+        border(0.px)
+        padding(8.px, 24.px)
+        fontSize(13.px)
+        fontWeight(500)
+        lineHeight("1.3")
+        width(60.percent)
+        property("margin", "auto")
+        marginTop(20.px)
+        backgroundColor(AppColors.primaryColor)
+        property("transition", "all 150ms linear")
+        cursor("pointer")
+        property("box-shadow", "2px 5px 10px #e4e4e4")
 
-    val cardListItemShow by style {
-        className("home-card-list-item-show")
-        flexGrow(1)
-    }
-
-    val cardListItemHide by style {
-        className("home-card-list-item-hide")
-        width(60.px)
-        minWidth(60.px)
+        self + hover style {
+            opacity(0.85)
+        }
+        self + active style {
+            opacity(0.7)
+        }
     }
 }
