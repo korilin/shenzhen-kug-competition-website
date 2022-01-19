@@ -29,7 +29,8 @@ fun BaseCard(
             maxWidth(850.px)
             position(Position.Relative)
             display(DisplayStyle.Flex)
-            padding(25.px)
+            padding(20.px)
+            paddingRight(40.px)
             alignItems(AlignItems.Center)
         }
 
@@ -37,8 +38,10 @@ fun BaseCard(
             val newTime = Date()
             if (newTime.getTime() - time.getTime() > 400) {
                 index.value += if (it.deltaY >= 0) 1 else -1
+                if (index.value < 0) index.value = infoContents.size - 1
+                if (index.value >= infoContents.size) index.value = 0
+                time = newTime
             }
-            time = newTime
         }
     }) {
 
@@ -47,6 +50,7 @@ fun BaseCard(
         Div({
             style {
                 overflow("hidden")
+                flexGrow(1)
             }
         }, infoContents[index.value])
 

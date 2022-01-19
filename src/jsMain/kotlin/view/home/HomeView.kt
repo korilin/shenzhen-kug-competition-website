@@ -8,9 +8,7 @@ import org.jetbrains.compose.web.dom.Div
 import org.jetbrains.compose.web.dom.Text
 import org.w3c.dom.HTMLDivElement
 import style.Animations
-import view.home.component.BaseCard
-import view.home.component.KUGBanner
-import view.home.component.KUGLogo
+import view.home.component.*
 
 private fun AttrsBuilder<HTMLDivElement>.entryAnimation(delay: CSSSizeValue<out CSSUnitTime>) = style {
     position(Position.Relative)
@@ -42,7 +40,12 @@ fun HomeView() = Div({
     BaseCard({ KUGLogo() }, arrayOf(
         { KUGBanner() },
         { Text(KUGInfo.description) },
-        {  })
-    )
+        {
+            KUGInfo.qqGroup.lines().forEach {
+                Div { Text(it) }
+            }
+        },
+        { ButtonGroup() }
+    ))
 }
 
