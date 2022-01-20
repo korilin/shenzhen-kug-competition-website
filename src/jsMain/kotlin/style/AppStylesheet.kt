@@ -57,17 +57,20 @@ object AppStylesheet : StyleSheet() {
         display(DisplayStyle.Flex)
         alignItems(AlignItems.Center)
         opacity(1)
+        property("visibility", "visible")
         top(0.px)
     }
 
     val baseCardContentShow by style {
         opacity(1)
+        property("visibility", "visible")
         top(0.px)
         property("transition-delay", "0.3s")
     }
 
     val baseCardContentHide by style {
         opacity(0)
+        property("visibility", "hidden")
         top(30.px)
     }
 }
