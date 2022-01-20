@@ -13,6 +13,9 @@ object AppStylesheet : StyleSheet() {
         "body" style {
             margin(0.px)
             padding(0.px)
+            minHeight(100.vh)
+            width(100.vw)
+            position(Position.Relative)
         }
     }
 

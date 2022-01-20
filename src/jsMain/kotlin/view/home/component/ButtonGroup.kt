@@ -34,6 +34,6 @@ fun ButtonGroup() = Div({
         classes(AppStylesheet.button)
         style { backgroundColor(AppColors.dark) }
     }) {
-        Text("GitHub")
+        Text("Organization GitHub")
     }
 }
