@@ -32,8 +32,13 @@ object BaseCardStylesheet : StyleSheet() {
         media(mediaMaxWidth(800.px)) {
             self style {
                 flexDirection(FlexDirection.Column)
-                padding(40.px)
-                paddingBottom(50.px)
+                padding(50.px)
+            }
+        }
+
+        media(mediaMaxWidth(550.px)) {
+            self style {
+                width(70.percent)
             }
         }
     }
@@ -44,24 +49,37 @@ object BaseCardStylesheet : StyleSheet() {
         property("transition", "all 0.3s")
         height(250.px)
         width(250.px)
+        textAlign(TextAlign.center)
 
-        media(mediaMaxWidth(1100.px)) {
+        media(mediaMaxWidth(950.px)) {
             self style {
-                property("transform", "translateX(-70px)")
+                height(180.px)
+                width(180.px)
             }
         }
 
         media(mediaMaxWidth(800.px)) {
             self style {
-                property("transform", "translateY(-180px)")
+                width(75.percent)
+                height(300.px)
+                property("transform", "translateY(-50%)")
             }
         }
 
         media(mediaMaxWidth(600.px)) {
             self style {
                 height(200.px)
-                width(200.px)
-                property("transform", "translateY(-120px)")
+            }
+        }
+    }
+
+    val cardContentWrap by style {
+        position(Position.Relative)
+        height(100.percent)
+        flexGrow(1)
+        media(mediaMaxWidth(800.px)) {
+            self style {
+                width(100.percent)
             }
         }
     }
@@ -69,6 +87,7 @@ object BaseCardStylesheet : StyleSheet() {
     val cardContent by style {
         property("transition", "all 0.3s linear")
         position(Position.Absolute)
+        height(100.percent)
         width(100.percent)
         display(DisplayStyle.Flex)
         alignItems(AlignItems.Center)
@@ -78,7 +97,7 @@ object BaseCardStylesheet : StyleSheet() {
 
         media(mediaMaxWidth(800.px)) {
             self style {
-                marginTop((-120).px)
+                marginTop((-100).px)
             }
         }
     }

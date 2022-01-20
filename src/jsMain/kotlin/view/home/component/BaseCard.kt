@@ -37,14 +37,7 @@ fun BaseCard(
     }) {
         LogoCard(logoCardContent)
 
-        Div({
-            style {
-                position(Position.Relative)
-                height(100.percent)
-                width(100.percent)
-                flexGrow(1)
-            }
-        }) {
+        Div({classes(BaseCardStylesheet.cardContentWrap) }) {
             for (i in infoContents.indices) {
                 Div({
                     classes(
