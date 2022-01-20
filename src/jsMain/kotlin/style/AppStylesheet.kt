@@ -51,29 +51,4 @@ object AppStylesheet : StyleSheet() {
             opacity(0.7)
         }
     }
-
-    val baseCardContent by style {
-        property("transition", "all 0.3s linear")
-        position(Position.Absolute)
-        height(100.percent)
-        width(100.percent)
-        display(DisplayStyle.Flex)
-        alignItems(AlignItems.Center)
-        opacity(1)
-        property("visibility", "visible")
-        top(0.px)
-    }
-
-    val baseCardContentShow by style {
-        opacity(1)
-        property("visibility", "visible")
-        top(0.px)
-        property("transition-delay", "0.3s")
-    }
-
-    val baseCardContentHide by style {
-        opacity(0)
-        property("visibility", "hidden")
-        top(30.px)
-    }
 }

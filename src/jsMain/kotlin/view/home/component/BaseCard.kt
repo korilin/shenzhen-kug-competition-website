@@ -11,28 +11,19 @@ import org.jetbrains.compose.web.dom.Span
 import org.w3c.dom.HTMLDivElement
 import style.AppColors
 import style.AppStylesheet
+import style.BaseCardStylesheet
 import style.TextAlign
 import kotlin.js.Date
 
 @Composable
 fun BaseCard(
-    unChangeContent: ContentBuilder<HTMLDivElement>,
+    logoCardContent: ContentBuilder<HTMLDivElement>,
     infoContents: Array<ContentBuilder<HTMLDivElement>>,
 ) {
     val index = remember { mutableStateOf(0) }
     var time = Date()
     Div({
-        classes(AppStylesheet.card)
-        style {
-            height(400.px)
-            width(90.percent)
-            maxWidth(850.px)
-            position(Position.Relative)
-            display(DisplayStyle.Flex)
-            padding(20.px)
-            paddingRight(50.px)
-            alignItems(AlignItems.Center)
-        }
+        classes(AppStylesheet.card, BaseCardStylesheet.baseCard)
 
         onWheel {
             val newTime = Date()
@@ -44,23 +35,22 @@ fun BaseCard(
             }
         }
     }) {
-
-        LeftCard(unChangeContent)
+        LogoCard(logoCardContent)
 
         Div({
             style {
                 position(Position.Relative)
                 height(100.percent)
-                overflow("hidden")
+                width(100.percent)
                 flexGrow(1)
             }
         }) {
             for (i in infoContents.indices) {
                 Div({
                     classes(
-                        AppStylesheet.baseCardContent,
-                        if (i == index.value) AppStylesheet.baseCardContentShow
-                        else AppStylesheet.baseCardContentHide
+                        BaseCardStylesheet.cardContent,
+                        if (i == index.value) BaseCardStylesheet.cardContentShow
+                        else BaseCardStylesheet.cardContentHide
                     )
                 }) {
                     Div({ style { width(100.percent) } }, infoContents[i])
@@ -73,15 +63,8 @@ fun BaseCard(
 }
 
 @Composable
-private fun LeftCard(unChangeContent: ContentBuilder<HTMLDivElement>) = Div({
-    classes(AppStylesheet.card)
-    style {
-        height(250.px)
-        width(250.px)
-        minWidth(250.px)
-        property("box-shadow", "4px 13px 30px 1px #8ec5fc")
-        property("transform", "translateX(-80px)")
-    }
+private fun LogoCard(unChangeContent: ContentBuilder<HTMLDivElement>) = Div({
+    classes(AppStylesheet.card, BaseCardStylesheet.logoCard)
 }, unChangeContent)
 
 @Composable

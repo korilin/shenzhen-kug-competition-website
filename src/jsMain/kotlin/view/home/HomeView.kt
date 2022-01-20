@@ -8,6 +8,7 @@ import org.jetbrains.compose.web.dom.Div
 import org.jetbrains.compose.web.dom.Text
 import org.w3c.dom.HTMLDivElement
 import style.Animations
+import style.BaseCardStylesheet
 import view.home.component.*
 
 /**
@@ -26,6 +27,7 @@ fun HomeView() = Div({
         alignItems(AlignItems.Center)
     }
 }) {
+    Style(BaseCardStylesheet)
     BaseCard({ KUGLogo() }, arrayOf(
         { KUGBanner() },
         { Text(KUGInfo.description) },

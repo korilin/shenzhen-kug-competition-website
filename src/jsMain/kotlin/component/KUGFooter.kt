@@ -32,7 +32,7 @@ fun KUGFooter() = Div({
         }
     }) {
         val link = "https://codepen.io/JavaScriptJunkie/pen/WgRBxw"
-        Text("Page Design From: ")
+        Text("This page style design comes from: ")
         A(href = link, attrs = {
             style {
                 color(AppColors.primaryColor)
