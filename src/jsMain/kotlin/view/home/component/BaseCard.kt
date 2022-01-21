@@ -56,6 +56,8 @@ fun BaseCard(
 
         onTouchMove {
             touchEnd = it.touches[0]!!.pageY
+            it.stopPropagation()
+            it.preventDefault()
         }
 
         onTouchEnd {
