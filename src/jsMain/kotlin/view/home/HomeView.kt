@@ -20,7 +20,6 @@ fun HomeView() = Div({
     style {
         minHeight(100.vh)
         width(100.percent)
-        position(Position.Absolute)
         background("linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%)")
         display(DisplayStyle.Flex)
         justifyContent(JustifyContent.Center)

@@ -33,12 +33,15 @@ object BaseCardStylesheet : StyleSheet() {
             self style {
                 flexDirection(FlexDirection.Column)
                 padding(50.px)
+                paddingBottom(0.px)
+                marginTop(150.px)
+                marginBottom(100.px)
             }
         }
 
-        media(mediaMaxWidth(550.px)) {
+        media(mediaMaxWidth(650.px)) {
             self style {
-                width(70.percent)
+                property("width","calc(90% - 100px)")
             }
         }
     }
@@ -49,6 +52,7 @@ object BaseCardStylesheet : StyleSheet() {
         property("transition", "all 0.3s")
         height(250.px)
         width(250.px)
+        minWidth(200.px)
         textAlign(TextAlign.center)
 
         media(mediaMaxWidth(950.px)) {
@@ -62,7 +66,7 @@ object BaseCardStylesheet : StyleSheet() {
             self style {
                 width(75.percent)
                 height(300.px)
-                property("transform", "translateY(-50%)")
+                property("transform", "translateY(-60%)")
             }
         }
 

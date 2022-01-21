@@ -29,6 +29,8 @@ fun KUGFooter() = Div({
             property("margin", "auto")
             borderRadius(20.px)
             fontSize(12.px)
+            marginLeft(10.px)
+            marginRight(10.px)
         }
     }) {
         val link = "https://codepen.io/JavaScriptJunkie/pen/WgRBxw"

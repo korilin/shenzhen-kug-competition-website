@@ -17,6 +17,9 @@ object AppStylesheet : StyleSheet() {
             width(100.vw)
             position(Position.Relative)
         }
+        "root" style {
+            position(Position.Relative)
+        }
     }
 
     val card by style {
@@ -27,17 +30,17 @@ object AppStylesheet : StyleSheet() {
         property("box-shadow", "rgb(0 0 0 / 10%) 1px 1px 5px 0px, rgb(0 0 0 / 5%) 2px 2px 20px 5px")
     }
 
-    val button by style {
-        display(DisplayStyle.Block)
+    val buttonGroupItem by style {
         borderRadius(30.px)
         color(Color.white)
+        width(100.percent)
         border(0.px)
+        flexGrow(1)
+        display(DisplayStyle.InlineBlock)
         padding(8.px, 24.px)
         fontSize(13.px)
         fontWeight(500)
         lineHeight("1.3")
-        width(60.percent)
-        property("margin", "auto")
         marginTop(20.px)
         backgroundColor(AppColors.primaryColor)
         property("transition", "all 150ms linear")
