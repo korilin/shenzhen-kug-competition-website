@@ -34317,8 +34317,6 @@
     $this$style.property_wbz76b_k$('margin', 'auto');
     borderRadius($this$style, _get_px_(20));
     fontSize($this$style, _get_px_(12));
-    marginLeft($this$style, _get_px_(10));
-    marginRight($this$style, _get_px_(10));
   };
   _no_name_provided__157.prototype.invoke_20e8_k$ = function (p1) {
     this.invoke_k9hshx_k$((!(p1 == null) ? isInterface(p1, StyleBuilder) : false) ? p1 : THROW_CCE());
@@ -34350,7 +34348,7 @@
       Text$composable('This page style design comes from: ', $composer_0, 6);
       var tmp = _no_name_provided_$factory_137();
       var tmp_0 = $composer_0;
-      A$composable(link, tmp, composableLambda(tmp_0, -819895577, true, _no_name_provided_$factory_138(link)), $composer_0, 438, 0);
+      A$composable(link, tmp, composableLambda(tmp_0, -819895578, true, _no_name_provided_$factory_138(link)), $composer_0, 438, 0);
     } else
       $composer_0.skipToGroupEnd_sv8swh_k$();
   };
@@ -34386,9 +34384,9 @@
   function ComposableSingletons$KUGFooterKt() {
     ComposableSingletons$KUGFooterKt_instance = this;
     var tmp = this;
-    tmp._lambda_1_0 = composableLambdaInstance(-985533904, false, _no_name_provided_$factory_135());
+    tmp._lambda_1_0 = composableLambdaInstance(-985533903, false, _no_name_provided_$factory_135());
     var tmp_0 = this;
-    tmp_0._lambda_2_0 = composableLambdaInstance(-985533679, false, _no_name_provided_$factory_136());
+    tmp_0._lambda_2_0 = composableLambdaInstance(-985533491, false, _no_name_provided_$factory_136());
   }
   ComposableSingletons$KUGFooterKt.$metadata$ = {
     simpleName: 'ComposableSingletons$KUGFooterKt',
@@ -34445,7 +34443,7 @@
     }
     position($this$style, tmp$ret$3);
     height($this$style, _get_px_(60));
-    width($this$style, _get_percent_(100));
+    width($this$style, _get_percent_(90));
     bottom($this$style, _get_px_(0));
     $this$style.property_wbz76b_k$('z-index', '100');
     var tmp$ret$7;
@@ -34494,6 +34492,8 @@
     alignItems($this$style, tmp$ret$11);
     Companion_getInstance_26();
     textAlign($this$style, 'center');
+    marginLeft($this$style, _get_percent_(5));
+    marginRight($this$style, _get_percent_(5));
   };
   _no_name_provided__161.prototype.invoke_20e8_k$ = function (p1) {
     this.invoke_k9hshx_k$((!(p1 == null) ? isInterface(p1, StyleBuilder) : false) ? p1 : THROW_CCE());
@@ -35216,7 +35216,7 @@
     padding($this$null, [_get_px_(50)]);
     paddingBottom($this$null, _get_px_(0));
     marginTop($this$null, _get_px_(150));
-    marginBottom($this$null, _get_px_(100));
+    marginBottom($this$null, _get_px_(80));
   };
   _no_name_provided__177.prototype.invoke_20e8_k$ = function (p1) {
     this.invoke_nj0yvr_k$((!(p1 == null) ? isInterface(p1, CSSBuilder) : false) ? p1 : THROW_CCE());
