@@ -14,12 +14,14 @@ fun KUGFooter() = Div({
     style {
         position(Position.Absolute)
         height(60.px)
-        width(100.percent)
+        width(90.percent)
         bottom(0.px)
         property("z-index", "100")
         display(DisplayStyle.Flex)
         alignItems(AlignItems.Center)
         textAlign(TextAlign.center)
+        marginLeft(5.percent)
+        marginRight(5.percent)
     }
 }) {
     Div({
@@ -29,8 +31,6 @@ fun KUGFooter() = Div({
             property("margin", "auto")
             borderRadius(20.px)
             fontSize(12.px)
-            marginLeft(10.px)
-            marginRight(10.px)
         }
     }) {
         val link = "https://codepen.io/JavaScriptJunkie/pen/WgRBxw"

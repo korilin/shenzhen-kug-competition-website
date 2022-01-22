@@ -35,7 +35,7 @@ object BaseCardStylesheet : StyleSheet() {
                 padding(50.px)
                 paddingBottom(0.px)
                 marginTop(150.px)
-                marginBottom(100.px)
+                marginBottom(80.px)
             }
         }
 
