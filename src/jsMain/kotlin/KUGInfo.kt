@@ -1,5 +1,3 @@
-package global
-
 object KUGInfo {
     const val title: String = "Shenzhen Kotlin User Group"
     const val subTitle: String = "Hi，这里是深圳 KUG，欢迎所有热爱 Kotlin 的开发者加入我们"

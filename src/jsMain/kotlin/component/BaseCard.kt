@@ -1,4 +1,4 @@
-package view.home.component
+package component
 
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.MutableState

@@ -1,7 +1,7 @@
-package view.home.component
+package component
 
 import androidx.compose.runtime.Composable
-import global.KUGInfo
+import KUGInfo
 import kotlinx.browser.window
 import org.jetbrains.compose.web.css.*
 import org.jetbrains.compose.web.dom.*
