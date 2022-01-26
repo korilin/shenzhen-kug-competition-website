@@ -4,7 +4,7 @@
   else if (typeof exports === 'object')
     factory(module.exports);
   else
-    root['shenzhen-kug-website-shenzhen-kug-home-page'] = factory(typeof this['shenzhen-kug-website-shenzhen-kug-home-page'] === 'undefined' ? {} : this['shenzhen-kug-website-shenzhen-kug-home-page']);
+    root['shenzhen-kug-home-page'] = factory(typeof this['shenzhen-kug-home-page'] === 'undefined' ? {} : this['shenzhen-kug-home-page']);
 }(this, function (_) {
   'use strict';
   ListIteratorImpl.prototype = Object.create(IteratorImpl.prototype);
@@ -38371,4 +38371,4 @@
   return _;
 }));
 
-//# sourceMappingURL=shenzhen-kug-website-shenzhen-kug-home-page.js.map
+//# sourceMappingURL=shenzhen-kug-home-page.js.map

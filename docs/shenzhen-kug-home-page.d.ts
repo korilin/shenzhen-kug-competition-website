@@ -5,4 +5,4 @@ export namespace kotlinx.atomicfu {
     function atomic$int$(initial: number, trace: kotlinx.atomicfu.TraceBase): kotlinx.atomicfu.AtomicInt;
     function atomic$long$(initial: kotlin.Long, trace: kotlinx.atomicfu.TraceBase): kotlinx.atomicfu.AtomicLong;
 }
-export as namespace shenzhen_kug_website_shenzhen_kug_home_page;
+export as namespace shenzhen_kug_home_page;
