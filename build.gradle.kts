@@ -1,13 +1,16 @@
-
 group = "cn.shenzhen-kug"
 version = "1.0.0"
+
+val submodules = arrayOf("shenzhen-kug-home-page")
 
 task("deploy", Copy::class) {
     group = "build"
     project.delete("docs")
     project.mkdir("docs")
-    from("build/js/packages/shenzhen-kug-website-shenzhen-kug-home-page/kotlin")
-    into("docs")
+    submodules.forEach {
+        from("$it/build/js/packages/$it/kotlin")
+        into("docs")
+    }
     from("CNAME")
     into("docs")
 }
