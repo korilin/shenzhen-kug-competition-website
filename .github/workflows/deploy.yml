@@ -32,12 +32,7 @@ jobs:
           cd hugo
           hugo
 
-  publish:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-
-      - name: Deploy into GitHub Page Repository
+      - name: Deploy Into Publish Branch
         uses: peaceiris/actions-gh-pages@v3
         with:
           PERSONAL_TOKEN: ${{ secrets.GITHUB_TOKEN }}
