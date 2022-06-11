@@ -32,11 +32,6 @@ jobs:
           cd hugo
           hugo
 
-      - name: Set Domain
-        run: |
-          echo shenzhen-kug.cn > hugo/public/CNAME
-
-    
   publish:
     runs-on: ubuntu-latest
     steps:
@@ -49,3 +44,5 @@ jobs:
           PUBLISH_BRANCH: publish
           PUBLISH_DIR: ./hugo/public
           commit_message: ${{ github.event.head_commit.message }}
+          cname: shenzhen-kug.cn
+          enable_jekyll: false
