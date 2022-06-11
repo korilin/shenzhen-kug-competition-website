@@ -1,2 +1,4 @@
-# shenzhen-kug-home-page
-深圳 Kotlin User Group 信息主页
+# website
+深圳 Kotlin User Group 主页
+
+构建：hugo
