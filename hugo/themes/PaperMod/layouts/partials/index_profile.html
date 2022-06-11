@@ -40,6 +40,14 @@
             {{- end }}
         </div>
         {{- end }}
+
+        {{- with .content }}
+        <ul class="profile-content-ul">
+        {{- range . }}
+                <li>{{ . }}</li>
+        {{- end }}
+        </ul>
+        {{- end }}
     </div>
     {{- end}}
 </div>

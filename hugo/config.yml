@@ -34,9 +34,11 @@ params:
   profileMode:
     enabled: true
     title: "Shenzhen Kotlin User Group" # optional default will be site title
-    subtitle: 
-      Hi, 这里是深圳 Kotlin 用户组，欢迎所有热爱 Kotlin 的开发者加入用户组，在这里可以和其它成员一起学习、讨论技术、解决问题 📚，我们还会不定期举行研讨会，进行与 Kotlin 相关的主题分享与讨论
-      
+    subtitle: Hi, 这里是深圳 Kotlin 用户组，欢迎所有热爱 Kotlin 的开发者加入用户组
+    content:
+      - 在这里可以和其它成员一起学习、讨论技术、解决问题 📚
+      - 我们还会不定期举行研讨会，进行与 Kotlin 相关的主题分享与讨论
+
     imageUrl: "szkug.jpeg" # optional
     imageTitle: "这个图标得重新做一个" # optional
     imageWidth: 360 # custom size
@@ -45,7 +47,7 @@ params:
     # TODO 竞赛、文章
     # 后端转Android
     buttons:
-      - name: More KUGs
+      - name: 寻找更多的用户组
         url: https://kotlinlang.org/community/user-groups/
 
   socialIcons:
