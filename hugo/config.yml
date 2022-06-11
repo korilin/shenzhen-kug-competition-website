@@ -1,6 +1,6 @@
 baseURL: https://shenzhen-kug.cn/
 languageCode: zh-cn
-title: 深圳 Kotlin User Group
+title: 深圳 KUG
 theme: "PaperMod"
 
 enableRobotsTXT: true
@@ -20,18 +20,13 @@ params:
   author: korilin
   # author: ["Me", "You"] # multiple authors
   # images: ["<link or path of image for opengraph, twitter-cards>"]
-  DateFormat: "January 12, 2022"
-  defaultTheme: light # dark, light
-  disableThemeToggle: true
+  defaultTheme: auto # dark, light
+  disableThemeToggle: false
 
   assets:
     # disableHLJS: true # to disable highlight.js
     # disableFingerprinting: true
     favicon: "szkug.jpeg"
-    # favicon16x16: "<link / abs url>"
-    # favicon32x32: "<link / abs url>"
-    # apple_touch_icon: "<link / abs url>"
-    # safari_pinned_tab: "<link / abs url>"
 
   label:
     text: "深圳 KUG"
@@ -39,15 +34,18 @@ params:
   profileMode:
     enabled: true
     title: "Shenzhen Kotlin User Group" # optional default will be site title
-    subtitle: "Hi, 这里是深圳 Kotlin 用户组, 欢迎所有热爱 Kotlin 的开发者加入用户组一起交流"
+    subtitle: 
+      Hi, 这里是深圳 Kotlin 用户组，欢迎所有热爱 Kotlin 的开发者加入用户组，在这里可以和其它成员一起学习、讨论技术、解决问题 📚，我们还会不定期举行研讨会，进行与 Kotlin 相关的主题分享与讨论
+      
     imageUrl: "szkug.jpeg" # optional
     imageTitle: "这个图标得重新做一个" # optional
-    imageWidth: 240 # custom size
-    imageHeight: 240 # custom size
+    imageWidth: 360 # custom size
+    imageHeight: 360 # custom size
+
     # TODO 竞赛、文章
     # 后端转Android
     buttons:
-      - name: More KUG
+      - name: More KUGs
         url: https://kotlinlang.org/community/user-groups/
 
   socialIcons:
@@ -59,7 +57,7 @@ params:
   ShowPostNavLinks: true
   ShowBreadCrumbs: true
   ShowCodeCopyButtons: false
-  ShowWordCount: true
+  ShowWordCount: false
   ShowRssButtonInSectionTermList: true
   UseHugoToc: true
   disableSpecial1stPost: false
@@ -93,22 +91,29 @@ params:
     threshold: 0.4
     minMatchCharLength: 0
     keys: ["title", "permalink", "summary", "content"]
+
 menu:
   main:
-    - identifier: 
+    - identifier: events
       name: 往期研讨会
       url: /events/
       weight: 1
-    - identifier: 
+    - identifier: official
       name: Kotlin 官方
       url: https://kotlinlang.org/
       weight: 2
-    - identifier:
-      name: Kotlin 中文文档
+    - identifier: kotlin docs
+      name: 中文文档
       url: https://www.kotlincn.net/
-    - indetifier:
+    - indetifier: community
       name: 交流社区
       url: https://discuss.kotliner.cn/
+
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON # is necessary
 
 # Read: https://github.com/adityatelange/hugo-PaperMod/wiki/FAQs#using-hugos-syntax-highlighter-chroma
 pygmentsUseClasses: true
