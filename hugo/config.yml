@@ -26,7 +26,7 @@ params:
   assets:
     # disableHLJS: true # to disable highlight.js
     # disableFingerprinting: true
-    favicon: "szkug.jpeg"
+    favicon: "logo.png"
 
   label:
     text: "深圳 KUG"
@@ -39,8 +39,8 @@ params:
       - 在这里可以和其它成员一起学习、讨论技术、解决问题 📚
       - 我们还会不定期举行研讨会，进行与 Kotlin 相关的主题分享与讨论
 
-    imageUrl: "szkug.jpeg" # optional
-    imageTitle: "这个图标得重新做一个" # optional
+    imageUrl: "logo.png" # optional
+    imageTitle: "sz_kug_logo" # optional
     imageWidth: 360 # custom size
     imageHeight: 360 # custom size
 
