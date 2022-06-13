@@ -64,7 +64,7 @@ params:
   UseHugoToc: true
   disableSpecial1stPost: false
   disableScrollToTop: false
-  comments: true
+  comments: false # 关闭评论，后续换其他
   hidemeta: false
   hideSummary: false
   showtoc: false
