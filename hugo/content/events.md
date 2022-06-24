@@ -1,5 +1,7 @@
 ---
-title: "往期研讨会"
+title: "Events"
+description: "往期研讨会记录"
+url: "/events/"
 layout: "events"
 ---
 
