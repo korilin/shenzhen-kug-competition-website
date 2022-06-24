@@ -6,7 +6,17 @@
     <description>Recent content in 研讨会 on 深圳 KUG</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Tue, 03 May 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://shenzhen-kug.cn/tags/%E7%A0%94%E8%AE%A8%E4%BC%9A/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 25 Jun 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://shenzhen-kug.cn/tags/%E7%A0%94%E8%AE%A8%E4%BC%9A/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>【New Event】 第四次研讨会准备中</title>
+      <link>https://shenzhen-kug.cn/events/event/</link>
+      <pubDate>Sat, 25 Jun 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://shenzhen-kug.cn/events/event/</guid>
+      <description>第四次活动准备中&amp;hellip;
+活动主题：使用 Kotlin 进行服务端开发（Spring WebFlux、Ktor）</description>
+    </item>
+    
     <item>
       <title>Thematic Seminar 3：Jetpack Compose</title>
       <link>https://shenzhen-kug.cn/events/serminar_20220502/</link>
