@@ -33,8 +33,8 @@ jobs:
       - name: Build Hugo Page
         run: |
           cd hugo
+          pwd
           hugo
-          cd ..
 
       - name: Deploy Into Publish Branch
         uses: peaceiris/actions-gh-pages@v3
@@ -44,4 +44,5 @@ jobs:
           PUBLISH_DIR: ../public
           commit_message: ${{ github.event.head_commit.message }}
           cname: shenzhen-kug.cn
+        run: pwd
 
