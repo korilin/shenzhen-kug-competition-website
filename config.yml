@@ -114,8 +114,6 @@ menu:
       name: 交流社区
       url: https://discuss.kotliner.cn/
 
-publishDir: ../public
-
 outputs:
   home:
     - HTML

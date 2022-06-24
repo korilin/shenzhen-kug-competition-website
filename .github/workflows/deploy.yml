@@ -32,7 +32,7 @@ jobs:
       - name: Setup Hugo Plugin
         uses: peaceiris/actions-hugo@v2
         with:
-            hugo-version: "0.85.0"
+            hugo-version: "latest"
             extended: true
       
       - name: Build Hugo Page
@@ -41,16 +41,11 @@ jobs:
           pwd
           hugo --minify
 
-      - name: Check Public Dir
-        run: |
-          pwd
-          ls
       - name: Deploy Into Publish Branch
         uses: peaceiris/actions-gh-pages@v3
         if: ${{ github.ref == 'refs/heads/main' }}
         with:
-          PERSONAL_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          publish_branch: publish
+          github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./public
           commit_message: ${{ github.event.head_commit.message }}
           cname: shenzhen-kug.cn
