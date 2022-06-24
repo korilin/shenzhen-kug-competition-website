@@ -48,7 +48,7 @@ params:
     # TODO 竞赛、文章
     # 后端转Android
     buttons:
-      - name: 往期研讨会
+      - name: 研讨会
         url: /events/
       - name: 寻找更多的用户组
         url: https://kotlinlang.org/community/user-groups/
@@ -100,7 +100,7 @@ params:
 menu:
   main:
     - identifier: events
-      name: 往期研讨会
+      name: 研讨会
       url: /events/
       weight: 1
     - identifier: official
