@@ -35,6 +35,9 @@ jobs:
           cd hugo
           pwd
           hugo
+          ls
+          cd ..
+          ls
 
       - name: Deploy Into Publish Branch
         uses: peaceiris/actions-gh-pages@v3
