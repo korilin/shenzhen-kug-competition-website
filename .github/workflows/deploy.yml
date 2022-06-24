@@ -35,10 +35,10 @@ jobs:
           cd hugo
           pwd
           hugo
+      - name: Check Public Dir
+        run: |
+          pwd
           ls
-          cd ..
-          ls
-
       - name: Deploy Into Publish Branch
         uses: peaceiris/actions-gh-pages@v3
         with:
