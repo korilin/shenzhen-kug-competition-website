@@ -43,7 +43,7 @@ jobs:
         if: ${{ github.ref == 'refs/heads/main' }}
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./public
+          publish_dir: ./output
           commit_message: ${{ github.event.head_commit.message }}
           cname: shenzhen-kug.cn
           enable_jekyll: true
