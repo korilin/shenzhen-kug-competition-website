@@ -40,7 +40,7 @@ jobs:
         with:
           PERSONAL_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           PUBLISH_BRANCH: publish
-          PUBLISH_DIR: hugo/public
+          PUBLISH_DIR: public
           commit_message: ${{ github.event.head_commit.message }}
           cname: shenzhen-kug.cn
 
