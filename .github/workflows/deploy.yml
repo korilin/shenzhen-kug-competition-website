@@ -44,7 +44,6 @@ jobs:
         with:
           PERSONAL_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           PUBLISH_BRANCH: publish
-          PUBLISH_DIR: /home/runner/work/website/website/public
           commit_message: ${{ github.event.head_commit.message }}
           cname: shenzhen-kug.cn
 
