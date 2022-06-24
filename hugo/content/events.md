@@ -1,8 +1,6 @@
 ---
 title: "往期研讨会"
 layout: "events"
-url: "/events/"
-summary: events
 ---
 
 ### 活动预告
