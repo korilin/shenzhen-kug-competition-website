@@ -31,11 +31,10 @@ jobs:
             extended: true
       
       - name: Build Hugo Page
-        # 执行两次hugo解决第一次构建缺少内容的问题
         run: |
           cd hugo
           hugo
-          hugo
+          cd ..
 
       - name: Deploy Into Publish Branch
         uses: peaceiris/actions-gh-pages@v3
