@@ -34,8 +34,7 @@ jobs:
         run: |
           cd hugo
           pwd
-          hugo
-          hugo
+          hugo --minify
       - name: Check Public Dir
         run: |
           pwd
