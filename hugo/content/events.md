@@ -5,5 +5,12 @@ url: "/events/"
 summary: events
 ---
 
-当前没有进行中的活动
+## 活动预告
 
+第四期 Thematic Seminar 筹办中，敬请期待~
+
+本次主题：使用 Kotlin 进行服务端开发
+
+活动日期：待定
+
+报名链接：待定

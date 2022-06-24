@@ -36,7 +36,7 @@ params:
     title: "Shenzhen Kotlin User Group" # optional default will be site title
     subtitle: Hi, 这里是深圳 Kotlin 用户组，欢迎所有热爱 Kotlin 的开发者加入用户组
     content:
-      - 在这里可以和其它成员一起学习、讨论技术、解决问题 📚
+      - 在这里可以和其它成员一起学习、讨论技术、解决问题（有人懂的话） 📚
       - 我们还会不定期举行研讨会，进行与 Kotlin 相关的主题分享与讨论
       - 用户组 QQ 交流群/频道：811981478（也有微信群）
 
