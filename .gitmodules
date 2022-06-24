@@ -1,4 +1,0 @@
-[submodule "publish"]
-	path = publish
-	url = https://github.com/szkug/website.git
-	branch = publish
