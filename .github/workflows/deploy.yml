@@ -43,5 +43,4 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_branch: publish
           commit_message: ${{ github.event.head_commit.message }}
-          cname: shenzhen-kug.cn
 
