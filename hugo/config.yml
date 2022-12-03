@@ -101,7 +101,7 @@ menu:
   main:
     - identifier: events
       name: 研讨会
-      url: /events/
+      url: /website-hugo/events/
       weight: 1
     - identifier: official
       name: Kotlin 官方
