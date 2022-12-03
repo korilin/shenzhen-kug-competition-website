@@ -49,7 +49,7 @@ params:
     # 后端转Android
     buttons:
       - name: 研讨会
-        url: /events/
+        url: events/
       - name: 寻找更多的用户组
         url: https://kotlinlang.org/community/user-groups/
 
