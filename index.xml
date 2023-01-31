@@ -6,15 +6,20 @@
     <description>Recent content on 深圳 KUG</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Sat, 25 Jun 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://szkug.github.io/website-hugo/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 31 Jan 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://szkug.github.io/website-hugo/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>【New Event】 第四次研讨会准备中</title>
-      <link>https://szkug.github.io/website-hugo/events/event/</link>
-      <pubDate>Sat, 25 Jun 2022 00:00:00 +0000</pubDate>
+      <title>【线下】深圳 KotlinConf Global 2023</title>
+      <link>https://szkug.github.io/website-hugo/events/event_20230131/</link>
+      <pubDate>Tue, 31 Jan 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://szkug.github.io/website-hugo/events/event/</guid>
-      <description>第四次活动准备中&amp;hellip;
-活动主题：使用 Kotlin 进行服务端开发（Spring WebFlux、Ktor）</description>
+      <guid>https://szkug.github.io/website-hugo/events/event_20230131/</guid>
+      <description>深圳 KotlinConf Global 2023 线下研讨会
+本次活动准备采取线上+线下的方式，可根据个人情况选择对应方式报名。
+进程 活动申请【已申请】 活动规划【进行中】 讲师安排【进行中】 活动场地【进行中】 活动报名【进行中】 活动通知【未开始】 礼品发放【未开始】 活动回放【未开始】 报名表 填写了讲师报名表的就不需要再填写活动报名表了
+讲师报名 本次活动也在募集讲师中，有兴趣在活动上（线上、线下都可以）进行分享的大佬可填写讲师报名表。
+报名链接：《KotlinConf Global 2023 | 讲师报名表》
+活动报名 参与线下活动时，可在现场获得小礼品
+报名链接：《KotlinConf Global 2023 | 讲师报名表》</description>
     </item>
     
     <item>
